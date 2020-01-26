@@ -59,7 +59,7 @@ def get_diagnosis(gender, age, symptoms):
         info = diag["Issue"]
 
         entry = {
-            "Name": info["Name"],
+            # "Name": info["Name"],
             "ID": info["ID"],
             "Prob": info["Accuracy"]
         }
