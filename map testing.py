@@ -72,8 +72,8 @@ def update_dots():
     mydb = myclient["SickoMode"]
     mycol = mydb["dots"]
 
-    for index, row in ogplus.iterrows():
-        mydict = {"latitude": row["latitude"], "longitude": row["longitude"], "id": row["name"], "std": row["stddev"], "date": datatime.now, "number": 2}
+    for index, row in data.iterrows():
+        mydict = {"latitude": row["latitude"], "longitude": row["longitude"], "id": row["name"], "std": row["stddev"], "date": datetime.datetime.now()- datetime.timedelta(hours=3), "number": 2}
         mycol.insert_one(mydict)
 
 
@@ -118,3 +118,6 @@ def get_html(data):
 
     this_map.save("hello.html")
     return this_map
+
+
+update_dots()
