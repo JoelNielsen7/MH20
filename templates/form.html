@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>My Form</title>
+    <script>
+
+	$(document).ready(function() {
+    $('.js-example-basic-single').select2();
+	document.getElementById("drop").selectedIndex = -1;
+
+});
+
+$(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
+});
+
+
+      function validate(){
+        var x = document.forms["myForm"]["eventname"].value;
+        var y = document.forms["myForm"]["location"].value;
+
+        if (/[^a-zA-Z0-9 ]/.test(x)){
+          alert("Event name must contain alphanumeric characters only");
+          return false;
+        }
+        else if(/[^a-zA-Z0-9 ]/.test(y)){
+          alert("Location must contain alphanumeric characters only");
+          return false;
+        }
+        return true;
+      }
+/*
+      $(function () {
+    opts = $('#optlist option').map(function () {
+        return [[this.value, $(this).text()]];
+    });
+    opts1 = $('#optlist1 option').map(function () {
+        return [[this.value, $(this).text()]];
+    });
+
+
+
+    $('#someinput').keyup(function () {
+
+        var rxp = new RegExp($('#someinput').val(), 'i');
+        var optlist = $('#optlist').empty();
+        opts.each(function () {
+            if (rxp.test(this[1])) {
+                optlist.append($('<option/>').attr('value', this[0]).text(this[1]));
+            } else{
+                optlist.append($('<option/>').attr('value', this[0]).text(this[1]).addClass("hidden"));
+            }
+        });
+        $(".hidden").toggleOption(false);
+
+    });
+        $('#someinput1').keyup(function () {
+
+        var rxp = new RegExp($('#someinput1').val(), 'i');
+        var optlist = $('#optlist1').empty();
+        opts1.each(function () {
+            if (rxp.test(this[1])) {
+                optlist.append($('<option/>').attr('value', this[0]).text(this[1]));
+            } else{
+                optlist.append($('<option/>').attr('value', this[0]).text(this[1]).addClass("hidden"));
+            }
+        });
+        $(".hidden").toggleOption(false);
+
+    });
+    $('.select-cities').click(function () {
+        $('.select-cities option:selected').remove().appendTo('.chosen-cities');
+        opts = $('#optlist option').map(function () {
+            return [[this.value, $(this).text()]];
+        });
+        opts1 = $('#optlist1 option').map(function () {
+        return [[this.value, $(this).text()]];
+    });
+    });
+
+    $('.chosen-cities').click(function () {
+        $('.chosen-cities option:selected').remove().appendTo('.select-cities');
+        opts = $('#optlist option').map(function () {
+            return [[this.value, $(this).text()]];
+        });
+        opts1 = $('#optlist1 option').map(function () {
+        return [[this.value, $(this).text()]];
+    });
+    });
+
+
+});
+
+jQuery.fn.toggleOption = function( show ) {
+    jQuery( this ).toggle( show );
+    if( show ) {
+        if( jQuery( this ).parent( 'span.toggleOption' ).length )
+            jQuery( this ).unwrap( );
+    } else {
+        if( jQuery( this ).parent( 'span.toggleOption' ).length == 0 )
+            jQuery( this ).wrap( '<span class="toggleOption" style="display: none;" />' );
+    }
+};
+*/
+$.getJSON('./get_symptoms',
+    function(data, textStatus, jqXHR) {
+        //x = JSON.parse(data);
+        //alert(data);
+        console.log(typeof data);
+        form = document.getElementById('optlist');
+        bod = build_body(data);
+        form.innerHTML = bod;
+    }
+)
+
+function build_body(data){
+  //alert("hello")
+  //alert(data[0])
+  //alert(data[37]);
+  str = '';
+  var i;
+
+  for (var key in data) {
+  if (data.hasOwnProperty(key)) {
+    var val = data[key];
+//    console.log(val);
+    str += "<option class=";
+    str += key;
+    str += ">";
+    str += val;
+    str += '</option>'
+    }
+  }
+  //alert(str)
+  return str
+}
+
+function build_diseases_body(data){
+  //alert("hello")
+  //alert(data[0])
+  //alert(data[37]);
+  str = '';
+  var i;
+
+  for (var key in data) {
+  if (data.hasOwnProperty(key)) {
+    var val = data[key];
+    console.log(val);
+    str += "<option class=";
+    str += key;
+    str += ">";
+    str += val;
+    str += '</option>'
+    }
+  }
+  //alert(str)
+  return str
+}
+
+
+
+$.getJSON('./get_diseases',
+    function(data, textStatus, jqXHR) {
+        //x = JSON.parse(data);
+        //alert(data);
+        console.log(typeof data);
+        form = document.getElementById('disease');
+        bod = build_diseases_body(data);
+        form.innerHTML = bod;
+    }
+)
+
+
+
+
+
+function yesnoCheck(that) {
+    if (that.value == "Yes") {
+//  alert("check");
+        document.getElementById("ifYes").style.display = "block";
+    } else {
+        document.getElementById("ifYes").style.display = "none";
+    }
+}
+
+    </script>
+  </head>
+
+  <body class="body">
+
+    <nav>
+      <ul class="nav">
+        <li><a href=./mySchedule.html>Home</a></li>
+        <li><a href=./myPlaces.html>Submit Symptoms</a></li>
+        <li><a href=./myForm.html>About</a></li>
+      </ul>
+    </nav>
+
+    <div class="formdiv">
+    <form name="myForm" method="post" onsubmit="return validate()" action="success.html">
+
+      <table class="form">
+
+        <tr>
+          <td>Gender</td>
+          <td>
+            <select name="days">
+              <option value="M">M</option>
+              <option value="F">F</option>
+              <option value="N">Prefer not to say</option>
+            </select>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>Age</td>
+          <td>
+            <input type="number" name="quantity" min="0" max="105">
+          </td>
+        </tr>
+
+	<tr>
+	<td>Symptoms (Select all that apply)</td>
+        <td><select class="js-example-basic-multiple" name="city" id="optlist" multiple="multiple" style="width: 150px;"></td>
+        </select>
+        </input>
+        <br/>
+	</tr>
+
+        <tr>
+          <td>Do you know what sickness you have?</td>
+          <td>
+            <select name="days" id="drop" onchange="yesnoCheck(this)">
+              <option value="Yes" id="yesCheck">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+        </tr>
+
+	<tr id="ifYes" style="display: none;">
+	<td>What Sickness?</td> <td><select class="js-example-basic-single" name="disease" id="disease" style="width: 150px;">
+        </select>
+	</td>
+	</tr>
+        <tr>
+          <td></td>
+          <td>
+            <input type="submit" value="Submit">
+	</td>
+	</tr>
+
+      </table>
+    </form>
+  </div>
+
+  </body>
+
+
+
+</html>

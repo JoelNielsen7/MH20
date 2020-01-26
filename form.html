@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <title>My Form</title>
+    <script>
+      function validate(){
+        var x = document.forms["myForm"]["eventname"].value;
+        var y = document.forms["myForm"]["location"].value;
+
+        if (/[^a-zA-Z0-9 ]/.test(x)){
+          alert("Event name must contain alphanumeric characters only");
+          return false;
+        }
+        else if(/[^a-zA-Z0-9 ]/.test(y)){
+          alert("Location must contain alphanumeric characters only");
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </head>
+
+  <body class="body">
+
+    <nav>
+      <ul class="nav">
+        <li><a href=./mySchedule.html>My Schedule</a></li>
+        <li><a href=./myPlaces.html>My Favorite Places</a></li>
+        <li><a href=./myForm.html>Form Input</a></li>
+        <li><a href=./myWidgets.html>My Widgets</a></li>
+      </ul>
+    </nav>
+    <div class="formdiv">
+    <form name="myForm" method="post" action="./new_entry">
+
+      <table class="form">
+
+        <tr>
+          <td>Day of the Week</td>
+          <td>
+            <select name="days">
+              <option value="Monday">Monday</option>
+              <option value="Tuesday">Tuesday</option>
+              <option value="Wednesday">Wednesday</option>
+              <option value="Thursday">Thursday</option>
+              <option value="Friday">Friday</option>
+              <option value="Saturday">Saturday</option>
+              <option value="Sunday">Sunday</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Start Time</td>
+          <td>
+            <input type="time" name="start" required>
+          </td>
+        </tr>
+
+        <tr>
+          <td>End Time</td>
+          <td>
+            <input type="time" name="end" required>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Event Name</td>
+          <td>
+            <input type="text" name="eventname" title="Alphanumeric characters only" required>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Location</td>
+          <td>
+            <input type="text" name="location" title="Alphanumeric characters only" required>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Enter a URL for the picture</td>
+          <td>
+            <input type="text" name="url" pattern="https?://.+" title="Please enter a valid URL" required>
+          </td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td>
+            <input type="submit" value="Submit">
+
+
+      </table>
+    </form>
+  </div>
+
+  </body>
+
+
+
+</html>
