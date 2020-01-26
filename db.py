@@ -22,7 +22,13 @@ def get_db():
 
     dattylist = []
     for row in x:
-        rowadd = [row["Latitude"], row["Longitude"], row["Confirmed"], row["Diseases"][0]["ID"], row["Diseases"][0]["Prob"], row["Diseases"][1]["ID"], row["Diseases"][1]["Prob"], row["Date"]]
+        if row["Confirmed"] != "y":
+            rowadd = [row["Latitude"], row["Longitude"], row["Confirmed"], row["Diseases"][0]["ID"],
+                      row["Diseases"][0]["Prob"], row["Diseases"][1]["ID"], row["Diseases"][1]["Prob"], row["Date"]]
+        else:
+            rowadd = [row["Latitude"], row["Longitude"], row["Confirmed"], row["Diseases"][0]["ID"],
+                      100, row["Diseases"][1]["ID"], 0, row["Date"]]
+
         dattylist.append(rowadd)
 
 
