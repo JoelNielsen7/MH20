@@ -73,7 +73,7 @@ def update_dots():
     mycol = mydb["dots"]
 
     for index, row in data.iterrows():
-        mydict = {"latitude": row["latitude"], "longitude": row["longitude"], "id": row["name"], "std": row["stddev"], "date": datetime.datetime.now()- datetime.timedelta(hours=3), "number": 2}
+        mydict = {"latitude": row["latitude"], "longitude": row["longitude"], "id": row["name"], "std": row["stddev"], "date": datetime.datetime.now()- datetime.timedelta(days=99, hours=3), "number": 2}
         mycol.insert_one(mydict)
 
 
@@ -117,7 +117,7 @@ def get_html(data):
 
 
     this_map.save("templates/hello.html")
-    
+
     phrase1 = '<head>'
     phrase2 = '<body>'
     html1 = ''' <link href="{{ url_for('static', filename='css/home_style.css') }}" rel="stylesheet"> '''
@@ -145,5 +145,3 @@ def get_html(data):
     fp.close()
 
     return this_map
-
-
