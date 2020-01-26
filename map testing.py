@@ -16,6 +16,12 @@ from db import get_db
 
 data = get_db()
 
+hotshot = pd.get_dummies(data["d1_id"],data["d2_id"])
+df = data[["latitude", "longitude", "d1_prob", "d2_prob"]]
+
+df = df.join(hotshot, how='outer')
+
+df
 
 this_map = folium.Map(prefer_canvas=True)
 
