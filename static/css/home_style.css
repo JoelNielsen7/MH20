@@ -38,3 +38,12 @@ text-align: right;
 .results{
 font-size: 30px;
 }
+.center {
+  display: block;
+  width: 50%;
+  margin-left: 90%;
+  martin-top: 10%;
+  float: right;
+  vertical-align: right;
+  padding-left: 40%;
+}

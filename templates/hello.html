@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_affeb385b48447e2a615a9c3ae51ca0b {
+                #map_9914b0163bd743c18bc155f1bbea94f2 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -49,37 +49,37 @@
     </nav>
    
     
-            <div class="folium-map" id="map_affeb385b48447e2a615a9c3ae51ca0b" ></div>
+            <div class="folium-map" id="map_9914b0163bd743c18bc155f1bbea94f2" ></div>
         
 </body>
 <script>    
     
-            var map_affeb385b48447e2a615a9c3ae51ca0b = L.map(
-                "map_affeb385b48447e2a615a9c3ae51ca0b",
+            var map_9914b0163bd743c18bc155f1bbea94f2 = L.map(
+                "map_9914b0163bd743c18bc155f1bbea94f2",
                 {
-                    center: [44.973516, -93.256018],
+                    center: [44.958057, -93.265234],
                     crs: L.CRS.EPSG3857,
-                    zoom: 10,
+                    zoom: 11,
                     zoomControl: true,
                     preferCanvas: false,
                 }
             );
-            L.control.scale().addTo(map_affeb385b48447e2a615a9c3ae51ca0b);
+            L.control.scale().addTo(map_9914b0163bd743c18bc155f1bbea94f2);
 
             
 
         
     
-            var tile_layer_85ff49a98bb946b3ada052e64ae74c50 = L.tileLayer(
+            var tile_layer_7f3cbefa8a6445ef8791eadaa4cef5d3 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_affeb385b48447e2a615a9c3ae51ca0b);
+            ).addTo(map_9914b0163bd743c18bc155f1bbea94f2);
         
     
-            var tile_layer_2ab5d6ba7eff4acd908fc36c6f507795 = L.tileLayer(
+            var tile_layer_e3402ac86d364f539742ca475a285aca = L.tileLayer(
                 "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_affeb385b48447e2a615a9c3ae51ca0b);
+            ).addTo(map_9914b0163bd743c18bc155f1bbea94f2);
         
     
             L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
@@ -89,7 +89,7 @@
                     return newdate.format("YYYY/MM");
                 }
             });
-            map_affeb385b48447e2a615a9c3ae51ca0b.timeDimension = L.timeDimension(
+            map_9914b0163bd743c18bc155f1bbea94f2.timeDimension = L.timeDimension(
                 {
                     period: "P1M",
                 }
@@ -97,9 +97,9 @@
             var timeDimensionControl = new L.Control.TimeDimensionCustom(
                 {"autoPlay": true, "loopButton": true, "maxSpeed": 0.7, "minSpeed": 0.1, "playerOptions": {"loop": true, "startOver": true, "transitionTime": 200}, "position": "bottomleft", "timeSliderDragUpdate": true}
             );
-            map_affeb385b48447e2a615a9c3ae51ca0b.addControl(this.timeDimensionControl);
+            map_9914b0163bd743c18bc155f1bbea94f2.addControl(this.timeDimensionControl);
 
-            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": []}, {
+            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-93.22497057911082, 44.97844929118058]}, "properties": {"time": "2020-01-22", "style": {"color": "#8FC6B4"}, "icon": "circle", "popup": " <b>Warning: 2 cases of <u>Flu</u> reported in this area. </b <br><a href = https://www.webmd.com/search/search_results/default.aspx?query=Flu> Learn more here </a>", "iconstyle": {"fillColor": "#8FC6B4", "fillOpacity": 0.6, "stroke": "False", "radius": 30.483819587146396}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-93.23286021159552, 44.954174618594124]}, "properties": {"time": "2020-01-22", "style": {"color": "#BAC39F"}, "icon": "circle", "popup": " <b>Warning: 2 cases of <u>Food poisoning</u> reported in this area. </b <br><a href = https://www.webmd.com/search/search_results/default.aspx?query=Food_poisoning> Learn more here </a>", "iconstyle": {"fillColor": "#BAC39F", "fillOpacity": 0.6, "stroke": "False", "radius": 6.854077179424415}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-93.47257991864501, 44.913810585434426]}, "properties": {"time": "2020-01-22", "style": {"color": "#E5B374"}, "icon": "circle", "popup": " <b>Warning: 2 cases of <u>Pink eye</u> reported in this area. </b <br><a href = https://www.webmd.com/search/search_results/default.aspx?query=Pink_eye> Learn more here </a>", "iconstyle": {"fillColor": "#E5B374", "fillOpacity": 0.6, "stroke": "False", "radius": 110.60893618507606}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-93.24360893871444, 44.98285852033094]}, "properties": {"time": "2020-01-22", "style": {"color": "#F99D78"}, "icon": "circle", "popup": " <b>Warning: 2 cases of <u>Measles</u> reported in this area. </b <br><a href = https://www.webmd.com/search/search_results/default.aspx?query=Measles> Learn more here </a>", "iconstyle": {"fillColor": "#F99D78", "fillOpacity": 0.6, "stroke": "False", "radius": 148.52936158267113}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-93.22563608112972, 44.873767080078544]}, "properties": {"time": "2020-01-22", "style": {"color": "#829C9C"}, "icon": "circle", "popup": " <b>Warning: 2 cases of <u>Burn</u> reported in this area. </b <br><a href = https://www.webmd.com/search/search_results/default.aspx?query=Burn> Learn more here </a>", "iconstyle": {"fillColor": "#829C9C", "fillOpacity": 0.6, "stroke": "False", "radius": 13.88244029302843}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-93.00012414481765, 45.25435388278669]}, "properties": {"time": "2020-01-22", "style": {"color": "#E4C678"}, "icon": "circle", "popup": " <b>Warning: 2 cases of <u>Stress disorder after trauma</u> reported in this area. </b <br><a href = https://www.webmd.com/search/search_results/default.aspx?query=Stress_disorder_after_trauma> Learn more here </a>", "iconstyle": {"fillColor": "#E4C678", "fillOpacity": 0.6, "stroke": "False", "radius": 215.1668170495086}}}]}, {
                     pointToLayer: function (feature, latLng) {
                         if (feature.properties.icon == 'marker') {
                             if(feature.properties.iconstyle){
@@ -130,13 +130,13 @@
                     }
                 })
 
-            var timestamped_geo_json_288595ed33da44498ccba2ed2bbc45f7 = L.timeDimension.layer.geoJson(
+            var timestamped_geo_json_d2ee50d2ebfe4f1f8a9a52cca6398b55 = L.timeDimension.layer.geoJson(
                 geoJsonLayer,
                 {
                     updateTimeDimension: true,
                     addlastPoint: true,
                     duration: undefined,
                 }
-            ).addTo(map_affeb385b48447e2a615a9c3ae51ca0b);
+            ).addTo(map_9914b0163bd743c18bc155f1bbea94f2);
         
 </script>
