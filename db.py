@@ -20,18 +20,19 @@ def get_db():
 
     x = mycol.find()
 
-    keys = x[1].keys()
+
 
     dattylist = []
     for row in x:
-        if row["Confirmed"] != "y":
-            rowadd = [row["Latitude"], row["Longitude"], row["Confirmed"], int(row["Diseases"][0]["ID"]),
-                      row["Diseases"][0]["Prob"]/100, int(row["Diseases"][1]["ID"]), row["Diseases"][1]["Prob"]/100, row["Date"]]
-        else:
-            rowadd = [row["Latitude"], row["Longitude"], row["Confirmed"], int(row["Diseases"][0]["ID"]),
-                      1, int(row["Diseases"][1]["ID"]), 0, row["Date"]]
+        if len(row["Diseases"]) > 1:
+            if row["Confirmed"] != "y":
+                rowadd = [row["Latitude"], row["Longitude"], row["Confirmed"], int(row["Diseases"][0]["ID"]),
+                          row["Diseases"][0]["Prob"]/100, int(row["Diseases"][1]["ID"]), row["Diseases"][1]["Prob"]/100, row["Date"]]
+            else:
+                rowadd = [row["Latitude"], row["Longitude"], row["Confirmed"], int(row["Diseases"][0]["ID"]),
+                          1, int(row["Diseases"][1]["ID"]), 0, row["Date"]]
 
-        dattylist.append(rowadd)
+            dattylist.append(rowadd)
 
     df = pd.DataFrame(dattylist, columns =['latitude', 'longitude', 'confirmed', 'd1_id', 'd1_prob', 'd2_id', 'd2_prob',"Date"], dtype = int)
 
