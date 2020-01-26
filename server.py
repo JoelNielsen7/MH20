@@ -6,6 +6,7 @@ import pymongo
 from symptoms import build_symptom_map
 from diseases import build_disease_map
 from datetime import datetime
+from map_testing import get_curdata, get_html
 #from flask_simple_geoip import SimpleGeoIP
 #from flask.ext.geoip import GeoIP
 import pygeoip
@@ -17,13 +18,16 @@ app = Flask("SickoMode")
 API_KEY = 'b5998aa55f5d387b5df67e92e82d00e9'
 @app.route("/", methods=['GET', 'POST'])
 def home():
+    data = get_curdata()
+    html = get_html(data)
+    print(html)
 #    geoip_data = simple_geoip.get_geoip_data()
 #    print(geoip_data)
 #    geoip = GeoIP(app)
 #    print(geoip)
 #    data = gi.record_by_addr(request.remote_addr)
 #    print(data)
-    return "Whats Up"
+    return render_template('/hello.html')
 
 
 @app.route("/form", methods=['GET', 'POST'])
@@ -87,7 +91,8 @@ def upload_data():
 
     print(x)
     return redirect("./", code=302)
-    return "Form stuff"
+
+
 @app.errorhandler(403)
 def page_not_found(e):
     # note that we set the 404 status explicitly
@@ -104,6 +109,9 @@ def get_diseases():
     map = build_disease_map()
     return jsonify(map)
 
+@app.route("/get_hello", methods=['GET'])
+def get_hello():
+    return render_template('/hello.html')
 
 if __name__ == "__main__":
     # Run app

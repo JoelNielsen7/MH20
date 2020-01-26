@@ -73,7 +73,7 @@ def update_dots():
     mycol = mydb["dots"]
 
     for index, row in data.iterrows():
-        mydict = {"latitude": row["latitude"], "longitude": row["longitude"], "id": row["name"], "std": row["stddev"], "date": datetime.datetime.now()- datetime.timedelta(hours=3), "number": 2}
+        mydict = {"latitude": row["latitude"], "longitude": row["longitude"], "id": row["name"], "std": row["stddev"], "date": datetime.datetime.now()- datetime.timedelta(days=99, hours=3), "number": 2}
         mycol.insert_one(mydict)
 
 
@@ -116,8 +116,32 @@ def get_html(data):
     #this_map.save(os.path.join('html_map_output/html_pop_up.html'))
 
 
-    this_map.save("hello.html")
+    this_map.save("templates/hello.html")
+
+    phrase1 = '<head>'
+    phrase2 = '<body>'
+    html1 = ''' <link href="{{ url_for('static', filename='css/home_style.css') }}" rel="stylesheet"> '''
+    html2 = ''' <nav>
+      <ul class="nav">
+        <li><a href=./>Home</a></li>
+        <li><a href=./form.html>Submit Symptoms</a></li>
+        <li><a href=./about.html>About</a></li>
+      </ul>
+    </nav>
+'''
+    found1 = False
+    found2 = False
+    with open('templates/hello.html') as f:
+        file = f.read()
+        i1 = file.index(phrase1)
+        i1 += 7
+        file = file[:i1] + html1 + file[i1:]
+        i2 = file.index(phrase2)
+        i2 += 7
+        file = file[:i2] + html2 + file[i2:]
+
+    fp = open('./templates/hello.html', 'w')
+    fp.write(file)
+    fp.close()
+
     return this_map
-
-
-update_dots()
