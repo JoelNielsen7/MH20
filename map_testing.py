@@ -14,8 +14,9 @@ import branca.colormap as cm
 import re
 import numpy as np
 import datetime
+from db import get_db_two
 from db import get_db
-
+import time
 from sklearn.preprocessing import StandardScaler
 def get_curdata():
     data = get_db()
@@ -28,7 +29,7 @@ def get_curdata():
 
 
 
-    db = DBSCAN(eps=.7, min_samples=2).fit(scaled_joined)
+    db = DBSCAN(eps=.7, min_samples=3).fit(scaled_joined)
     labels = db.labels_
 
 
@@ -56,10 +57,11 @@ def get_curdata():
     magic_list = []
 
     for key in magic_dic.keys():
-        magic_list.append(
-            [mean(magic_dic[key][0]),mean(magic_dic[key][1]),stdev(magic_dic[key][1]), most_common(magic_dic[key][2])])
+        if key != -1:
+            magic_list.append(
+                [mean(magic_dic[key][0]),mean(magic_dic[key][1]),stdev(magic_dic[key][1]), most_common(magic_dic[key][2]), magic_dic[key][2].count(most_common(magic_dic[key][2]))])
 
-    data = pd.DataFrame(magic_list, columns =['latitude', 'longitude', 'stddev', "name"], dtype = float)
+    data = pd.DataFrame(magic_list, columns =['latitude', 'longitude', 'stddev', "name", "count"], dtype = float)
     return data
 def update_dots():
     data = get_curdata()
@@ -72,9 +74,45 @@ def update_dots():
     mydb = myclient["SickoMode"]
     mycol = mydb["dots"]
 
-    for index, row in data.iterrows():
-        mydict = {"latitude": row["latitude"], "longitude": row["longitude"], "id": row["name"], "std": row["stddev"], "date": datetime.datetime.now()- datetime.timedelta(days=99, hours=3), "number": 2}
-        mycol.insert_one(mydict)
+    counter = 0
+    listadd = []
+    for number in range(0,15):
+        counter += 1
+        for index, row in data.iterrows():
+            number = 1 + number/4
+            day_delta = counter
+            if index ==0:
+                mydict = {"latitude": row["latitude"]+.0029*number, "longitude": row["longitude"]-.0019*number, "id": row["name"], "std": row["stddev"]/(1.16+number*1.1), "date": datetime.datetime.now()- datetime.timedelta(days=day_delta, hours=3), "number": 2}
+            if index == 1:
+                mydict = {"latitude": row["latitude"]-.008*number, "longitude": row["longitude"]+.001*number, "id": row["name"],
+                          "std": row["stddev"] / (1.16+number), "date": datetime.datetime.now() - datetime.timedelta(days=day_delta, hours=3),
+                          "number": 2}
+            if index == 2:
+                mydict = {"latitude": row["latitude"]+.0026*number, "longitude": row["longitude"]-.0011*number, "id": row["name"],
+                          "std": row["stddev"] / (1.16+number*2), "date": datetime.datetime.now() - datetime.timedelta(days=day_delta, hours=3),
+                          "number": 2}
+                print("here")
+
+            if index == 3:
+                mydict = {"latitude": row["latitude"], "longitude": row["longitude"]+.263*number, "id": row["name"],
+                          "std": row["stddev"] / (1.16+number), "date": datetime.datetime.now() - datetime.timedelta(days=day_delta, hours=3),
+                          "number": 2}
+
+            if index == 4:
+                mydict = {"latitude": row["latitude"], "longitude": row["longitude"], "id": row["name"],
+                          "std": row["stddev"] /(1.16+number*1.1), "date": datetime.datetime.now() - datetime.timedelta(days=day_delta, hours=3),
+                          "number": 2}
+                print("here")
+            if index == 5:
+                mydict = {"latitude": row["latitude"], "longitude": row["longitude"], "id": row["name"],
+                          "std": row["stddev"] / 2.1, "date": datetime.datetime.now() - datetime.timedelta(days=day_delta, hours=3),
+                          "number": 2}
+                print("here")
+
+            time.sleep(.1)
+            mycol.insert_one(mydict)
+
+
 
 
 
@@ -145,5 +183,3 @@ def get_html(data):
     fp.close()
 
     return this_map
-
-
