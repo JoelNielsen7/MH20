@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_da4e84798f534acca5f333bcc7c6ad77 {
+                #map_affeb385b48447e2a615a9c3ae51ca0b {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -32,6 +32,13 @@
                 }
             </style>
         
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="https://rawcdn.githack.com/nezasa/iso8601-js-period/master/iso8601.min.js"></script>
+    <script src="https://rawcdn.githack.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 </head>
 <body>  <nav>
       <ul class="bar nav">
@@ -42,231 +49,94 @@
     </nav>
    
     
-            <div class="folium-map" id="map_da4e84798f534acca5f333bcc7c6ad77" ></div>
+            <div class="folium-map" id="map_affeb385b48447e2a615a9c3ae51ca0b" ></div>
         
 </body>
 <script>    
     
-            var map_da4e84798f534acca5f333bcc7c6ad77 = L.map(
-                "map_da4e84798f534acca5f333bcc7c6ad77",
+            var map_affeb385b48447e2a615a9c3ae51ca0b = L.map(
+                "map_affeb385b48447e2a615a9c3ae51ca0b",
                 {
-                    center: [0, 0],
+                    center: [44.973516, -93.256018],
                     crs: L.CRS.EPSG3857,
-                    zoom: 1,
+                    zoom: 10,
                     zoomControl: true,
-                    preferCanvas: true,
+                    preferCanvas: false,
                 }
             );
+            L.control.scale().addTo(map_affeb385b48447e2a615a9c3ae51ca0b);
 
             
 
         
     
-            var tile_layer_105a9db7c6ac4a38a23e812927c614ee = L.tileLayer(
+            var tile_layer_85ff49a98bb946b3ada052e64ae74c50 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_da4e84798f534acca5f333bcc7c6ad77);
+            ).addTo(map_affeb385b48447e2a615a9c3ae51ca0b);
         
     
-            var tile_layer_cd2d171e18704c95a563eba86144acbb = L.tileLayer(
+            var tile_layer_2ab5d6ba7eff4acd908fc36c6f507795 = L.tileLayer(
                 "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_da4e84798f534acca5f333bcc7c6ad77);
+            ).addTo(map_affeb385b48447e2a615a9c3ae51ca0b);
         
     
-            var circle_marker_db3bf5aa7dd7467f8881c13ebadc7323 = L.circleMarker(
-                [44.98050843677087, -93.22381636866623],
-                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#336600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 102.33004968952758, "stroke": true, "weight": 1}
-            ).addTo(map_da4e84798f534acca5f333bcc7c6ad77);
-        
-    
-        var popup_8459efd8931a47d28473004848ea36cc = L.popup({"maxWidth": "100%"});
-
-        
-            var html_bf8a5517185541918aeb1f3128af960b = $(`<div id="html_bf8a5517185541918aeb1f3128af960b" style="width: 100.0%; height: 100.0%;">Listing: <a href="adsf"target="_blank">buttwhole aids</a><br>Host: <a href="hey"target="_blank">15 people died</a></div>`)[0];
-            popup_8459efd8931a47d28473004848ea36cc.setContent(html_bf8a5517185541918aeb1f3128af960b);
-        
-
-        circle_marker_db3bf5aa7dd7467f8881c13ebadc7323.bindPopup(popup_8459efd8931a47d28473004848ea36cc)
-        ;
-
-        
-    
-    
-            var circle_marker_2f50ce34b1754772bef7a23c78a0890b = L.circleMarker(
-                [44.95663642789118, -93.23224181739329],
-                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#336600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.918680756834128, "stroke": true, "weight": 1}
-            ).addTo(map_da4e84798f534acca5f333bcc7c6ad77);
-        
-    
-        var popup_def697d290c74598b50e08aee5687745 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_38acbccffa884a62806d5d29764b2379 = $(`<div id="html_38acbccffa884a62806d5d29764b2379" style="width: 100.0%; height: 100.0%;">Listing: <a href="adsf"target="_blank">buttwhole aids</a><br>Host: <a href="hey"target="_blank">15 people died</a></div>`)[0];
-            popup_def697d290c74598b50e08aee5687745.setContent(html_38acbccffa884a62806d5d29764b2379);
-        
-
-        circle_marker_2f50ce34b1754772bef7a23c78a0890b.bindPopup(popup_def697d290c74598b50e08aee5687745)
-        ;
-
-        
-    
-    
-            var circle_marker_b0c773bbedcc4848a36c176bf4661241 = L.circleMarker(
-                [44.91023637815164, -93.4754213779675],
-                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#336600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 369.0906805833638, "stroke": true, "weight": 1}
-            ).addTo(map_da4e84798f534acca5f333bcc7c6ad77);
-        
-    
-        var popup_8239b031e7a1485ca8afa8f3394b9e7c = L.popup({"maxWidth": "100%"});
-
-        
-            var html_88583b84193a44b4aa25a6e8809cf510 = $(`<div id="html_88583b84193a44b4aa25a6e8809cf510" style="width: 100.0%; height: 100.0%;">Listing: <a href="adsf"target="_blank">buttwhole aids</a><br>Host: <a href="hey"target="_blank">15 people died</a></div>`)[0];
-            popup_8239b031e7a1485ca8afa8f3394b9e7c.setContent(html_88583b84193a44b4aa25a6e8809cf510);
-        
-
-        circle_marker_b0c773bbedcc4848a36c176bf4661241.bindPopup(popup_8239b031e7a1485ca8afa8f3394b9e7c)
-        ;
-
-        
-    
-    
-            var circle_marker_c5879e709d9544f78843a333241e6f30 = L.circleMarker(
-                [44.974178314208984, -93.23356056213379],
-                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#336600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.4606411819935434, "stroke": true, "weight": 1}
-            ).addTo(map_da4e84798f534acca5f333bcc7c6ad77);
-        
-    
-        var popup_ed0beaa8e54b442da8531a3fb534ef14 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_98552c6e0bf54a69aa5e7a87e85d5c14 = $(`<div id="html_98552c6e0bf54a69aa5e7a87e85d5c14" style="width: 100.0%; height: 100.0%;">Listing: <a href="adsf"target="_blank">buttwhole aids</a><br>Host: <a href="hey"target="_blank">15 people died</a></div>`)[0];
-            popup_ed0beaa8e54b442da8531a3fb534ef14.setContent(html_98552c6e0bf54a69aa5e7a87e85d5c14);
-        
-
-        circle_marker_c5879e709d9544f78843a333241e6f30.bindPopup(popup_ed0beaa8e54b442da8531a3fb534ef14)
-        ;
-
-        
-    
-    
-            var circle_marker_52bb117ea7e445c0b875f2adb249d25f = L.circleMarker(
-                [44.974388122558594, -93.2337417602539],
-                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#336600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "stroke": true, "weight": 1}
-            ).addTo(map_da4e84798f534acca5f333bcc7c6ad77);
-        
-    
-        var popup_93cd99c8d6cf46c29cd3bb6d25bcbf16 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_99a610f20d0945ae810bf278041fefbd = $(`<div id="html_99a610f20d0945ae810bf278041fefbd" style="width: 100.0%; height: 100.0%;">Listing: <a href="adsf"target="_blank">buttwhole aids</a><br>Host: <a href="hey"target="_blank">15 people died</a></div>`)[0];
-            popup_93cd99c8d6cf46c29cd3bb6d25bcbf16.setContent(html_99a610f20d0945ae810bf278041fefbd);
-        
-
-        circle_marker_52bb117ea7e445c0b875f2adb249d25f.bindPopup(popup_93cd99c8d6cf46c29cd3bb6d25bcbf16)
-        ;
-
-        
-    
-    
-            var circle_marker_441f69d2b3884dbdadad21cb75f9ec47 = L.circleMarker(
-                [44.974388122558594, -93.2337417602539],
-                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#336600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "stroke": true, "weight": 1}
-            ).addTo(map_da4e84798f534acca5f333bcc7c6ad77);
-        
-    
-        var popup_54a9c388a66e40b99c8928d512602da3 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_78130249fcca49ca831193ab296b5e29 = $(`<div id="html_78130249fcca49ca831193ab296b5e29" style="width: 100.0%; height: 100.0%;">Listing: <a href="adsf"target="_blank">buttwhole aids</a><br>Host: <a href="hey"target="_blank">15 people died</a></div>`)[0];
-            popup_54a9c388a66e40b99c8928d512602da3.setContent(html_78130249fcca49ca831193ab296b5e29);
-        
-
-        circle_marker_441f69d2b3884dbdadad21cb75f9ec47.bindPopup(popup_54a9c388a66e40b99c8928d512602da3)
-        ;
-
-        
-    
-    
-            var circle_marker_ac0e9a60eda04690bf38b9e5dea8ec74 = L.circleMarker(
-                [44.97405242919922, -93.23345184326172],
-                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#336600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.8475811917360474, "stroke": true, "weight": 1}
-            ).addTo(map_da4e84798f534acca5f333bcc7c6ad77);
-        
-    
-        var popup_2738b5a525b1478ca86b3526e40be668 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_f9d1f8170a96400599a42e20192f0eeb = $(`<div id="html_f9d1f8170a96400599a42e20192f0eeb" style="width: 100.0%; height: 100.0%;">Listing: <a href="adsf"target="_blank">buttwhole aids</a><br>Host: <a href="hey"target="_blank">15 people died</a></div>`)[0];
-            popup_2738b5a525b1478ca86b3526e40be668.setContent(html_f9d1f8170a96400599a42e20192f0eeb);
-        
-
-        circle_marker_ac0e9a60eda04690bf38b9e5dea8ec74.bindPopup(popup_2738b5a525b1478ca86b3526e40be668)
-        ;
-
-        
-    
-    
-            var circle_marker_59073bacb48444e794e3cb863afd9a02 = L.circleMarker(
-                [44.974388122558594, -93.2337417602539],
-                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#336600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "stroke": true, "weight": 1}
-            ).addTo(map_da4e84798f534acca5f333bcc7c6ad77);
-        
-    
-        var popup_c72bbf42b75541f781612d8fe07d815c = L.popup({"maxWidth": "100%"});
-
-        
-            var html_bf55006483e644dd86bf98011059129e = $(`<div id="html_bf55006483e644dd86bf98011059129e" style="width: 100.0%; height: 100.0%;">Listing: <a href="adsf"target="_blank">buttwhole aids</a><br>Host: <a href="hey"target="_blank">15 people died</a></div>`)[0];
-            popup_c72bbf42b75541f781612d8fe07d815c.setContent(html_bf55006483e644dd86bf98011059129e);
-        
-
-        circle_marker_59073bacb48444e794e3cb863afd9a02.bindPopup(popup_c72bbf42b75541f781612d8fe07d815c)
-        ;
-
-        
-    
-    
-            var circle_marker_a00050e22f1e444fad8db8c1ec228331 = L.circleMarker(
-                [44.97405242919922, -93.23345184326172],
-                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#336600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.8475811917360474, "stroke": true, "weight": 1}
-            ).addTo(map_da4e84798f534acca5f333bcc7c6ad77);
-        
-    
-        var popup_d5745d09fa3b4886b03ae2ca07706fad = L.popup({"maxWidth": "100%"});
-
-        
-            var html_49c5c47ce4cd4f56826b2e8671a2f8a3 = $(`<div id="html_49c5c47ce4cd4f56826b2e8671a2f8a3" style="width: 100.0%; height: 100.0%;">Listing: <a href="adsf"target="_blank">buttwhole aids</a><br>Host: <a href="hey"target="_blank">15 people died</a></div>`)[0];
-            popup_d5745d09fa3b4886b03ae2ca07706fad.setContent(html_49c5c47ce4cd4f56826b2e8671a2f8a3);
-        
-
-        circle_marker_a00050e22f1e444fad8db8c1ec228331.bindPopup(popup_d5745d09fa3b4886b03ae2ca07706fad)
-        ;
-
-        
-    
-    
-            var circle_marker_056012122543486987ad88453293914c = L.circleMarker(
-                [44.97270965576172, -93.23229217529297],
-                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#336600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "stroke": true, "weight": 1}
-            ).addTo(map_da4e84798f534acca5f333bcc7c6ad77);
-        
-    
-        var popup_68d0000769d84fb78b7d7ad0d4628285 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_24cd7c06dd1848b58cf8917c76c2faab = $(`<div id="html_24cd7c06dd1848b58cf8917c76c2faab" style="width: 100.0%; height: 100.0%;">Listing: <a href="adsf"target="_blank">buttwhole aids</a><br>Host: <a href="hey"target="_blank">15 people died</a></div>`)[0];
-            popup_68d0000769d84fb78b7d7ad0d4628285.setContent(html_24cd7c06dd1848b58cf8917c76c2faab);
-        
-
-        circle_marker_056012122543486987ad88453293914c.bindPopup(popup_68d0000769d84fb78b7d7ad0d4628285)
-        ;
-
-        
-    
-    
-            map_da4e84798f534acca5f333bcc7c6ad77.fitBounds(
-                [[44.91023637815164, -93.4754213779675], [44.98050843677087, -93.22381636866623]],
-                {}
+            L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
+                _getDisplayDateFormat: function(date){
+                    var newdate = new moment(date);
+                    console.log(newdate)
+                    return newdate.format("YYYY/MM");
+                }
+            });
+            map_affeb385b48447e2a615a9c3ae51ca0b.timeDimension = L.timeDimension(
+                {
+                    period: "P1M",
+                }
             );
+            var timeDimensionControl = new L.Control.TimeDimensionCustom(
+                {"autoPlay": true, "loopButton": true, "maxSpeed": 0.7, "minSpeed": 0.1, "playerOptions": {"loop": true, "startOver": true, "transitionTime": 200}, "position": "bottomleft", "timeSliderDragUpdate": true}
+            );
+            map_affeb385b48447e2a615a9c3ae51ca0b.addControl(this.timeDimensionControl);
+
+            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": []}, {
+                    pointToLayer: function (feature, latLng) {
+                        if (feature.properties.icon == 'marker') {
+                            if(feature.properties.iconstyle){
+                                return new L.Marker(latLng, {
+                                    icon: L.icon(feature.properties.iconstyle)});
+                            }
+                            //else
+                            return new L.Marker(latLng);
+                        }
+                        if (feature.properties.icon == 'circle') {
+                            if (feature.properties.iconstyle) {
+                                return new L.circleMarker(latLng, feature.properties.iconstyle)
+                                };
+                            //else
+                            return new L.circleMarker(latLng);
+                        }
+                        //else
+
+                        return new L.Marker(latLng);
+                    },
+                    style: function (feature) {
+                        return feature.properties.style;
+                    },
+                    onEachFeature: function(feature, layer) {
+                        if (feature.properties.popup) {
+                        layer.bindPopup(feature.properties.popup);
+                        }
+                    }
+                })
+
+            var timestamped_geo_json_288595ed33da44498ccba2ed2bbc45f7 = L.timeDimension.layer.geoJson(
+                geoJsonLayer,
+                {
+                    updateTimeDimension: true,
+                    addlastPoint: true,
+                    duration: undefined,
+                }
+            ).addTo(map_affeb385b48447e2a615a9c3ae51ca0b);
         
 </script>

@@ -8,6 +8,8 @@ from diseases import build_disease_map
 from datetime import datetime
 from map_testing import get_curdata, get_html
 import apimedic
+from db import get_db_two
+from new_map import make_map, create_geojson_features
 #from flask_simple_geoip import SimpleGeoIP
 #from flask.ext.geoip import GeoIP
 import pygeoip
@@ -26,9 +28,13 @@ apimedic.init_obj()
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
-    data = get_curdata()
-    html = get_html(data)
-    print(html)
+    #data = get_curdata()
+    #html = get_html(data)
+    #print(html)
+    data = get_db_two()
+    features = create_geojson_features(data)
+    map = make_map(features)
+#    map.save("templates/hello.html")
 #    geoip_data = simple_geoip.get_geoip_data()
 #    print(geoip_data)
 #    geoip = GeoIP(app)
@@ -170,5 +176,5 @@ def get_hello():
 
 if __name__ == "__main__":
     # Run app
-    app.run(host="0.0.0.0", port=80)
-
+    app.run(host="0.0.0.0", debug=True, port=80)
+    #app.run()
