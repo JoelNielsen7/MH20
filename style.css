@@ -1,0 +1,240 @@
+*{
+  font-family: sans-serif;
+}
+
+.body{
+  background-color:darkgrey;
+}
+
+table{
+  float: left;
+  border-collapse: collapse;
+}
+
+table,th,td{
+border: 1px solid black;
+}
+
+.day{
+  font-weight: bold;
+}
+
+.time{
+  font-style: italic;
+  text-align: center;
+}
+
+.odd{
+  background-color:lightblue;
+}
+
+.even{
+  background-color: white;
+}
+
+.nav {
+  background-color: darkblue;
+  list-style-type: none;
+  /*background-image: url("nav-background.jpg");*/
+}
+
+.nav a{
+  color:white;
+  text-decoration: none;
+}
+
+.nav li{
+  display: inline-block;
+  font-size: 25px;
+  padding: 20px;
+}
+
+.sat{
+  text-align: center;
+  padding: 5px 0px 50px 0px;
+  font-style: italic;
+}
+
+.location{
+  text-align: center;
+}
+
+.goldy{
+  width: 500px;
+  height: 350px;
+  display:inline-block;
+  padding: 100px 300px 0px 50px;
+}
+
+
+td img{
+  display:none;
+}
+
+td:hover img{
+  display:block;
+/*  widght:50px;
+  height:50px;
+  padding: 0px 100px;*/
+  margin-left: auto;
+  margin-right: auto;
+  widght:50px;
+  height: 50px;
+}
+
+.disappear{
+  display:none;
+  height:0px;
+  width:0px;
+}
+
+#places{
+  color:white;
+}
+
+.place{
+  background-color: black;
+  padding:40px;
+}
+
+.plist{
+  font-size: 20px;
+  color:white;
+  text-decoration: none;
+  width:50%;
+  padding:10px 0px;
+  background-color: darkblue;
+}
+
+.ptext{
+  font-size: 20px;
+  color:white;
+  text-decoration: none;
+}
+
+.form{
+  background-color: white;
+  padding: 20px 0;
+}
+
+.divplace{
+  width:50%;
+}
+
+.formdiv{
+  padding: 0 40%;
+}
+
+
+
+body{
+margin: 0;
+padding: 0;
+font-family: 'Raleway', sans-serif;
+font-size: 15px;
+line-height: 1.5;
+}
+#container {
+width: 535px;
+background: #ffffff;
+padding: 20px;
+margin: 90px auto;
+border-radius: 5px;
+height: 200px;
+border: 2px solid gray;
+}
+#header {
+text-align: center;
+background-color: #FEFFED;
+border-radius: 5px;
+margin: -39px -20px 10px -20px;
+}
+h2{
+padding-top: 10px;
+}
+#content {
+margin-left: 57px;
+margin-top: 40px;
+}
+#register label{
+margin-right:5px;
+}
+#register input {
+padding: 5px 14px;
+border: 1px solid #d5d9da;
+box-shadow: 0 0 9px #0E34F5 inset;
+width: 272px;
+font-size: 1em;
+height: 25px;
+}
+
+
+#register .short{
+font-weight:bold;
+color:#FF0000;
+font-size:larger;
+}
+#register .weak{
+font-weight:bold;
+color:orange;
+font-size:larger;
+}
+#register .good{
+font-weight:bold;
+color:#2D98F3;
+font-size:larger;
+}
+#register .strong{
+font-weight:bold;
+color: limegreen;
+font-size:larger;
+}
+
+
+#bar{
+  background-color: gray;
+  padding: 0px 300px 0px 0px;
+}
+
+#bar.short {
+  padding: 0px 250px 0px 0px;
+}
+
+#bar.weak {
+  padding: 0px 200px 0px 0px;
+}
+
+#bar.good {
+  padding: 0px 100px 0px 0px;
+}
+
+#bar.strong {
+  padding: 0;
+}
+
+#inner.short{
+  background-color:red;
+  padding: 0px 50px 0px 0px;
+}
+#inner.weak{
+  background-color:yellow;
+  padding: 0px 100px 0px 0px;
+}
+
+#inner.good{
+  background-color: blue;
+  padding: 0px 200px 0px 0px;
+}
+
+#inner.strong{
+  background-color: green;
+  padding: 0px 300px 0px 0px;
+}
+
+#youtube{
+  padding: 40px 40px 40px 600px;
+}
+
+.insta{
+  margin: 40px 0px 40px 600px;
+}

@@ -1,11 +1,16 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify, send_from_directory, redirect
+import os
 import requests
 import json
 import pymongo
+from symptoms import build_symptom_map
+from diseases import build_disease_map
+from datetime import datetime
 #from flask_simple_geoip import SimpleGeoIP
 #from flask.ext.geoip import GeoIP
 import pygeoip
 
+root_dir = '/home/ec2-user/site/MH20'
 app = Flask("SickoMode")
 #gi = pygeoip.GeoIP()
 #simple_geoip = SimpleGeoIP(app)
@@ -21,9 +26,19 @@ def home():
     return "Whats Up"
 
 
+@app.route("/form", methods=['GET', 'POST'])
+def form():
+    print("hey")
+   # return send_from_directory(os.path.join(root_dir, 'static'), 'index.html')
+    return render_template('/index.html')
+
+
 @app.route("/new_entry", methods=['POST'])
 def upload_data():
-    form = json.loads(request.data)
+    #form = json.loads(request.data)
+    form = request.form;
+    form = form.to_dict(flat=False)
+    print(form)
     #print(json.loads(request.form.get('ex')))
     #print(request.get_json())
     #result = request.form.to_dict(flat=False)
@@ -39,13 +54,18 @@ def upload_data():
     lat = data['latitude']
     lon = data['longitude']
     print("Lat, lon", lat, lon)
-    gender = form['gender']
-    age = form['age']
-    symptoms = form['symptoms']
-    confirmed = form['confirmed']
-    date = form['date']
-    diseases = form['diseases']
+    gender = form['gender'][0]
+    age = int(form['age'][0])
+    symptoms = form['symptoms[]']
+    print("S", symptoms)
+    confirmed = form['confirmed'][0]
+    date = datetime.now()
+    disease = form['disease']
+    print("yo")
+    dis_json = [{'ID': disease[0], 'Prob': 100}]
 
+    if confirmed == 'n':
+        dis_json = []
 
     myclient = pymongo.MongoClient("mongodb+srv://SickoMode:SickoMode@cluster0-zfxxk.mongodb.net/test?retryWrites=true&w=majority")
 
@@ -53,30 +73,39 @@ def upload_data():
     mycol = mydb["Diseases"]
 
     data = {
-    'gender': gender,
-    'latitude': lat,
-    'longitude': lon,
-    'age': age,
-    'symptoms': symptoms,
-    'confirmed': confirmed,
-    'date': date,
-    'diseases': diseases
+    'Gender': gender,
+    'Latitude': lat,
+    'Longitude': lon,
+    'Age': age,
+    'Symptoms': symptoms,
+    'Confirmed': confirmed,
+    'Date': date,
+    'Diseases': dis_json
     }
     print(data)
     x = mycol.insert_one(data)
 
     print(x)
-
+    return redirect("./", code=302)
     return "Form stuff"
 @app.errorhandler(403)
 def page_not_found(e):
     # note that we set the 404 status explicitly
     return "Unauthorized"
 
+
+@app.route("/get_symptoms", methods=['GET'])
+def get_symptoms():
+    map = build_symptom_map()
+    return jsonify(map)
+
+@app.route("/get_diseases", methods=['GET'])
+def get_diseases():
+    map = build_disease_map()
+    return jsonify(map)
+
+
 if __name__ == "__main__":
     # Run app
     app.run(host="0.0.0.0", port=80)
-<<<<<<< HEAD
-    #app.run(host="0.0.0.0", ssl_context='adhoc', port=443)
-=======
->>>>>>> 9f0d26b2ff8a6d23fd5db3c344be5a26e39b6a5a
+
