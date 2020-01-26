@@ -55,7 +55,7 @@ def make_map(features):
     temp = TimestampedGeoJson(
         {'type': 'FeatureCollection',
         'features': features}
-        , period='P1D'
+        , period='P1H'
         , add_last_point=True
         , auto_play=True
         , loop=True
