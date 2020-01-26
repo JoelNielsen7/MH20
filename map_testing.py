@@ -73,7 +73,7 @@ def update_dots():
     mycol = mydb["dots"]
 
     for index, row in data.iterrows():
-        mydict = {"latitude": row["latitude"], "longitude": row["longitude"], "id": row["name"], "std": row["stddev"], "date": datetime.datetime.now()- datetime.timedelta(hours=3), "number": 2}
+        mydict = {"latitude": row["latitude"], "longitude": row["longitude"], "id": row["name"], "std": row["stddev"], "date": datetime.datetime.now()- datetime.timedelta(days=99, hours=3), "number": 2}
         mycol.insert_one(mydict)
 
 
