@@ -40,10 +40,10 @@ font-size: 30px;
 }
 .center {
   display: block;
-  width: 50%;
-  margin-left: 90%;
-  martin-top: 10%;
+  width: 60%;
+  margin-left: 100%;
+  margin-top: 10px;
   float: right;
   vertical-align: right;
-  padding-left: 40%;
+  padding-left: 45%;
 }
