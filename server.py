@@ -76,4 +76,7 @@ def page_not_found(e):
 if __name__ == "__main__":
     # Run app
     app.run(host="0.0.0.0", port=80)
+<<<<<<< HEAD
     #app.run(host="0.0.0.0", ssl_context='adhoc', port=443)
+=======
+>>>>>>> 9f0d26b2ff8a6d23fd5db3c344be5a26e39b6a5a

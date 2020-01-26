@@ -1,0 +1,7 @@
+gender
+location
+age
+list of symptom ids
+confirmed
+date
+disease guess - objects with name and probability
