@@ -20,6 +20,7 @@ API_KEY = 'b5998aa55f5d387b5df67e92e82d00e9'
 
 
 disease_map = build_disease_map()
+apimedic.init_obj()
 
 @app.route("/", methods=['GET', 'POST'])
 def home():
@@ -73,8 +74,9 @@ def upload_data():
     print("yo")
     dis_json = [{'ID': disease[0], 'Prob': 100}]
 
+    print(gender, age, symptoms)
     if confirmed == 'n':
-        dis_json = api_medic.get_diagnosis(gender, age, symptoms)
+        dis_json = apimedic.get_diagnosis(gender, age, symptoms)
 
     myclient = pymongo.MongoClient("mongodb+srv://SickoMode:SickoMode@cluster0-zfxxk.mongodb.net/test?retryWrites=true&w=majority")
 
@@ -95,7 +97,8 @@ def upload_data():
     x = mycol.insert_one(data)
 
 
-    
+    if confirmed == 'n':
+        return redirect(url_for('get_name', diagnosis=dis_json))
 
     print(x)
     return redirect("./", code=302)
@@ -110,9 +113,41 @@ def get_name():
     for dis in diseases:
         final.append({'Name': disease_map[dis['ID']], 'Prob': dis['Prob']})
 
-    
+    l = 0
+    if len(final) >= 5:
+        l=5
+    else:
+        l = len(final)
+    html = '<span class="contact100-form-title">'
+    html += ''' You Matched With '''
+    html += l 
+    html += ''' Diseases...
+                                </span>
+                        <table style="width: 100%" frame=void border=1 rules=rows>'''
+    for dis in final:
+        html += '''<tr>
+                        <td class="results"> '''
+        html += dis['Name']
+        html += ''' </td>
+                        <td class="percent results"> '''
+        html += dis['Prob']
+        html += '''%</td>
+                        </tr>'''
 
-    
+    html += '''</table>'''
+
+    phrase = '''class="wrap-contact100">'''
+
+    with open('templates/results.html') as f:
+        file = f.read()
+        i1 = file.index(phrase)
+        i1 += 23
+        file = file[:i1] + html + file[i1:]
+    fp = open('./templates/results.html', 'w')
+    fp.write(file)
+    fp.close()
+
+    return render_template('/results.html')
 
 @app.errorhandler(403)
 def page_not_found(e):
