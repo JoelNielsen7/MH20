@@ -79,7 +79,7 @@ def upload_data():
     'Age': age,
     'Symptoms': symptoms,
     'Confirmed': confirmed,
-    'Date': date,
+    'Date': str(date),
     'Diseases': dis_json
     }
     print(data)
