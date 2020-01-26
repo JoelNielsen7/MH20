@@ -54,7 +54,6 @@ def get_diagnosis(gender, age, symptoms):
     suggested = []
     print(response)
     for diag in response:
-        print(diag)
 
         info = diag["Issue"]
 
@@ -67,6 +66,6 @@ def get_diagnosis(gender, age, symptoms):
 
     return suggested
 
-#init_obj()
-#diag = get_diagnosis('male', 16, [40, 146])
+init_obj()
+diag = get_diagnosis('male', 16, [40, 146])
 #print(diag)
