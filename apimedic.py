@@ -67,6 +67,6 @@ def get_diagnosis(gender, age, symptoms):
 
     return suggested
 
-#init_obj()
-#diag = get_diagnosis('male', 16, [40, 146])
-#print(diag)
+init_obj()
+diag = get_diagnosis('male', 16, [40, 146])
+print(diag)

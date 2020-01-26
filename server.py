@@ -132,6 +132,8 @@ def upload_data():
 
     html += '''</table>'''
 
+
+    print(html)
     #phrase = '''class="wrap-contact100">'''
 
     #with open('templates/results.html') as f:
@@ -144,7 +146,7 @@ def upload_data():
     #fp.flush()
     #os.fsync(fp)
     #fp.close()
-    return render_template('/results2.html', table=html)
+    return render_template('/results3.html', table=html)
 
 @app.errorhandler(403)
 def page_not_found(e):
