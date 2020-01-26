@@ -21,16 +21,17 @@ def get_db():
     keys = x[1].keys()
 
     dattylist = []
-    keys = ["Latitude","Longitude", "Confirmed", "Diseases" ]
     for row in x:
-        rowadd = [row["Latitude"], row["Longitude"], row["Confirmed"], row["Diseases"][0]["ID"], row["Diseases"][0]["Prob"], row["Diseases"][1]["ID"], row["Diseases"][1]["Prob"]]
+        rowadd = [row["Latitude"], row["Longitude"], row["Confirmed"], row["Diseases"][0]["ID"], row["Diseases"][0]["Prob"], row["Diseases"][1]["ID"], row["Diseases"][1]["Prob"], row["Date"]]
         dattylist.append(rowadd)
 
 
 
 
 
-    df = pd.DataFrame(dattylist, columns =['latitude', 'longitude', 'confirmed', 'd1_id', 'd1_prob', 'd2_id', 'd2_prob'], dtype = float)
+    df = pd.DataFrame(dattylist, columns =['latitude', 'longitude', 'confirmed', 'd1_id', 'd1_prob', 'd2_id', 'd2_prob',"Date"], dtype = float)
+    df
+
 
     return(df)
 

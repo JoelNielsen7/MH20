@@ -26,8 +26,8 @@ def makeHref(url,link_text = None):
 
 def popopHTMLString(point):
     '''input: a series that contains a url somewhere in it and generate html'''
-    html = 'Listing: ' + makeHref(point.d1_prob, point.d1_id) + '<br>'
-    html += 'Host: ' + makeHref(point.d2_id, point.d2_id)
+    html = 'Listing: ' + makeHref(point.confirmed, point.confirmed) + '<br>'
+    html += 'Host: ' + makeHref(point.confirmed, point.confirmed)
     return html
 
 def plotDot(point):
