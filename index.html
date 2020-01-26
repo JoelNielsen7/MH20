@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fa399e79ec744c57aa51d8df2f74df0a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_fa399e79ec744c57aa51d8df2f74df0a" ></div>
+        
+</body>
+<script>    
+    
+            var map_fa399e79ec744c57aa51d8df2f74df0a = L.map(
+                "map_fa399e79ec744c57aa51d8df2f74df0a",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: true,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_331479f469c247d0aec02f64c89f8501 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+            var circle_marker_6d9f1c9ff9d94687b0113e31bd810276 = L.circleMarker(
+                [45.533373135355866, -122.64823571872928],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_60eac0e121ef4f96a9f35ff650f6cde9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3e6064a2f23347cca053c189b7cb45a4 = $(`<div id="html_3e6064a2f23347cca053c189b7cb45a4" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/5794291"target="_blank">Private suites near it all- Room #6</a><br>Host: <a href="https://www.airbnb.com/users/show/3029738"target="_blank">Phil</a></div>`)[0];
+            popup_60eac0e121ef4f96a9f35ff650f6cde9.setContent(html_3e6064a2f23347cca053c189b7cb45a4);
+        
+
+        circle_marker_6d9f1c9ff9d94687b0113e31bd810276.bindPopup(popup_60eac0e121ef4f96a9f35ff650f6cde9)
+        ;
+
+        
+    
+    
+            var circle_marker_8c20fc3d73bb4ab88183071c81d6da8e = L.circleMarker(
+                [45.5320482256037, -122.64122311847832],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_ee90fed1aa6d4a529670fed4af489c51 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2212f8a5e3924075bedb0425ef6b21f0 = $(`<div id="html_2212f8a5e3924075bedb0425ef6b21f0" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/15358320"target="_blank">Bohemian Escape</a><br>Host: <a href="https://www.airbnb.com/users/show/78494301"target="_blank">Pamela</a></div>`)[0];
+            popup_ee90fed1aa6d4a529670fed4af489c51.setContent(html_2212f8a5e3924075bedb0425ef6b21f0);
+        
+
+        circle_marker_8c20fc3d73bb4ab88183071c81d6da8e.bindPopup(popup_ee90fed1aa6d4a529670fed4af489c51)
+        ;
+
+        
+    
+    
+            var circle_marker_8b0783cfed654938ae6ae0311b90e26e = L.circleMarker(
+                [45.5339320686091, -122.64720554334028],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_4ae0744055274f62b25e4a5e0274f8e1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4413bc8a1dc1464a9b06049dd1a2deb4 = $(`<div id="html_4413bc8a1dc1464a9b06049dd1a2deb4" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/15164536"target="_blank">NE BUNK-HOUSE : Single bed - TOP</a><br>Host: <a href="https://www.airbnb.com/users/show/17261537"target="_blank">Ian & Sharmil</a></div>`)[0];
+            popup_4ae0744055274f62b25e4a5e0274f8e1.setContent(html_4413bc8a1dc1464a9b06049dd1a2deb4);
+        
+
+        circle_marker_8b0783cfed654938ae6ae0311b90e26e.bindPopup(popup_4ae0744055274f62b25e4a5e0274f8e1)
+        ;
+
+        
+    
+    
+            var circle_marker_fb9ff79fd52341cd85428dfe7406a828 = L.circleMarker(
+                [45.53449121732471, -122.64688297158196],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_a77f49f0c8bd431b89076361acf99c29 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2c56cd6d10344891b6339864450b5255 = $(`<div id="html_2c56cd6d10344891b6339864450b5255" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/6106997"target="_blank">LOCATION NE! "Mt Hood" : King bed</a><br>Host: <a href="https://www.airbnb.com/users/show/17261537"target="_blank">Ian & Sharmil</a></div>`)[0];
+            popup_a77f49f0c8bd431b89076361acf99c29.setContent(html_2c56cd6d10344891b6339864450b5255);
+        
+
+        circle_marker_fb9ff79fd52341cd85428dfe7406a828.bindPopup(popup_a77f49f0c8bd431b89076361acf99c29)
+        ;
+
+        
+    
+    
+            var circle_marker_bf3155830c6a4393943b2f9f054cca5d = L.circleMarker(
+                [45.533273528474254, -122.64687008708758],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_b586f9e8a5d64a469047bc1701bd5287 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_660d1d00e758463e80c5ea2f35300cdb = $(`<div id="html_660d1d00e758463e80c5ea2f35300cdb" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/5134256"target="_blank">Private suites near it all- Room #4</a><br>Host: <a href="https://www.airbnb.com/users/show/3029738"target="_blank">Phil</a></div>`)[0];
+            popup_b586f9e8a5d64a469047bc1701bd5287.setContent(html_660d1d00e758463e80c5ea2f35300cdb);
+        
+
+        circle_marker_bf3155830c6a4393943b2f9f054cca5d.bindPopup(popup_b586f9e8a5d64a469047bc1701bd5287)
+        ;
+
+        
+    
+    
+            var circle_marker_47b381baa4bf4a699e7aa6da61176cb1 = L.circleMarker(
+                [45.53386633734002, -122.64775700369785],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_6530646cbcb74c7583918e1b9d9b2d2e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f222146cc2b54d6c9c9d71393e4d442d = $(`<div id="html_f222146cc2b54d6c9c9d71393e4d442d" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/5133946"target="_blank">Private suites near it all- Room #3</a><br>Host: <a href="https://www.airbnb.com/users/show/3029738"target="_blank">Phil</a></div>`)[0];
+            popup_6530646cbcb74c7583918e1b9d9b2d2e.setContent(html_f222146cc2b54d6c9c9d71393e4d442d);
+        
+
+        circle_marker_47b381baa4bf4a699e7aa6da61176cb1.bindPopup(popup_6530646cbcb74c7583918e1b9d9b2d2e)
+        ;
+
+        
+    
+    
+            var circle_marker_56f07796d0fb4762af43476eb2caf8d8 = L.circleMarker(
+                [45.533900035428715, -122.650292210428],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_3793913c819442cbb7d73bf75f005b08 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6907024802a54333900f000915d537a4 = $(`<div id="html_6907024802a54333900f000915d537a4" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/6690925"target="_blank">Cozy APT in center Portland Oregon</a><br>Host: <a href="https://www.airbnb.com/users/show/34951548"target="_blank">Nicole</a></div>`)[0];
+            popup_3793913c819442cbb7d73bf75f005b08.setContent(html_6907024802a54333900f000915d537a4);
+        
+
+        circle_marker_56f07796d0fb4762af43476eb2caf8d8.bindPopup(popup_3793913c819442cbb7d73bf75f005b08)
+        ;
+
+        
+    
+    
+            var circle_marker_ca63ff69f5804301901847d27068d186 = L.circleMarker(
+                [45.53331340012331, -122.6451693285645],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_dd6bb5f126814aa0aa41743869333ca1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ba0e338f8b8a4e919b21a930d6e03960 = $(`<div id="html_ba0e338f8b8a4e919b21a930d6e03960" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/4000140"target="_blank">Fully equipped, Private studio apartment,</a><br>Host: <a href="https://www.airbnb.com/users/show/20738963"target="_blank">Jodi</a></div>`)[0];
+            popup_dd6bb5f126814aa0aa41743869333ca1.setContent(html_ba0e338f8b8a4e919b21a930d6e03960);
+        
+
+        circle_marker_ca63ff69f5804301901847d27068d186.bindPopup(popup_dd6bb5f126814aa0aa41743869333ca1)
+        ;
+
+        
+    
+    
+            var circle_marker_73065e3bb380487693357a7960159af2 = L.circleMarker(
+                [45.532733569196004, -122.63972491079329],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_12c6a6ba9a0844b7bb5eacf6d4db1829 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_de3ba0d7e14642e0b6d822931a1f2829 = $(`<div id="html_de3ba0d7e14642e0b6d822931a1f2829" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/3678338"target="_blank">Portland\'s best kept secret...</a><br>Host: <a href="https://www.airbnb.com/users/show/1795731"target="_blank">Matt</a></div>`)[0];
+            popup_12c6a6ba9a0844b7bb5eacf6d4db1829.setContent(html_de3ba0d7e14642e0b6d822931a1f2829);
+        
+
+        circle_marker_73065e3bb380487693357a7960159af2.bindPopup(popup_12c6a6ba9a0844b7bb5eacf6d4db1829)
+        ;
+
+        
+    
+    
+            var circle_marker_22a41ec66fe24e02afd10814a7360459 = L.circleMarker(
+                [45.53223563971762, -122.64542490867336],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_d7451c9477814f6b9089b7b0d1f2502d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_52fe1959916146849baf97baea00acc3 = $(`<div id="html_52fe1959916146849baf97baea00acc3" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/7547444"target="_blank">Near Oregon Convention Center</a><br>Host: <a href="https://www.airbnb.com/users/show/1770933"target="_blank">Anastasia</a></div>`)[0];
+            popup_d7451c9477814f6b9089b7b0d1f2502d.setContent(html_52fe1959916146849baf97baea00acc3);
+        
+
+        circle_marker_22a41ec66fe24e02afd10814a7360459.bindPopup(popup_d7451c9477814f6b9089b7b0d1f2502d)
+        ;
+
+        
+    
+    
+            var circle_marker_7f373897c5f043429f61d1275277f1fb = L.circleMarker(
+                [45.53087029937939, -122.64446324120772],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_a618ab5ffeb1480f9410267c8325acf4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7a9379d9032d4799a1fa8f367f483acd = $(`<div id="html_7a9379d9032d4799a1fa8f367f483acd" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/14505032"target="_blank">New & Nearby Convention Center (2bd, 1bth)</a><br>Host: <a href="https://www.airbnb.com/users/show/45410272"target="_blank">Omar & Amanda</a></div>`)[0];
+            popup_a618ab5ffeb1480f9410267c8325acf4.setContent(html_7a9379d9032d4799a1fa8f367f483acd);
+        
+
+        circle_marker_7f373897c5f043429f61d1275277f1fb.bindPopup(popup_a618ab5ffeb1480f9410267c8325acf4)
+        ;
+
+        
+    
+    
+            var circle_marker_ae67e724e197449bbf4e83565011ce1a = L.circleMarker(
+                [45.53408749053485, -122.63662592785549],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_02c95f1e0e014f40a9ee4763c238fe87 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2ba207e5086540fdb6d311f36b55d509 = $(`<div id="html_2ba207e5086540fdb6d311f36b55d509" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/13031007"target="_blank">Best Neighborhood--2 Bedrooom</a><br>Host: <a href="https://www.airbnb.com/users/show/636668"target="_blank">Sara Osheroff</a></div>`)[0];
+            popup_02c95f1e0e014f40a9ee4763c238fe87.setContent(html_2ba207e5086540fdb6d311f36b55d509);
+        
+
+        circle_marker_ae67e724e197449bbf4e83565011ce1a.bindPopup(popup_02c95f1e0e014f40a9ee4763c238fe87)
+        ;
+
+        
+    
+    
+            var circle_marker_2d9d1160f9614eb4a45f0a5cdab25a14 = L.circleMarker(
+                [45.53210668555924, -122.64447226601801],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_f3804416b99a4c82bfd3eb15cc1ab0d5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4de2f2f9600a4c779bfa6ed7a2a9df04 = $(`<div id="html_4de2f2f9600a4c779bfa6ed7a2a9df04" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/12819993"target="_blank">Adorable Bedroom in NE Portland</a><br>Host: <a href="https://www.airbnb.com/users/show/15661721"target="_blank">Alison</a></div>`)[0];
+            popup_f3804416b99a4c82bfd3eb15cc1ab0d5.setContent(html_4de2f2f9600a4c779bfa6ed7a2a9df04);
+        
+
+        circle_marker_2d9d1160f9614eb4a45f0a5cdab25a14.bindPopup(popup_f3804416b99a4c82bfd3eb15cc1ab0d5)
+        ;
+
+        
+    
+    
+            var circle_marker_09baa0c491ff480493963ca8e6fe3e23 = L.circleMarker(
+                [45.53396442759364, -122.64852666243108],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_1e05b25de32a49a8a85af463630b16ce = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4096bf5e9e554e0b9e6b52ea523aa803 = $(`<div id="html_4096bf5e9e554e0b9e6b52ea523aa803" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/10885290"target="_blank">NE BUNK-HOUSE : Queen Bunk - TOP</a><br>Host: <a href="https://www.airbnb.com/users/show/17261537"target="_blank">Ian & Sharmil</a></div>`)[0];
+            popup_1e05b25de32a49a8a85af463630b16ce.setContent(html_4096bf5e9e554e0b9e6b52ea523aa803);
+        
+
+        circle_marker_09baa0c491ff480493963ca8e6fe3e23.bindPopup(popup_1e05b25de32a49a8a85af463630b16ce)
+        ;
+
+        
+    
+    
+            var circle_marker_315b519b37294523aff414d84728d20f = L.circleMarker(
+                [45.53277483588533, -122.648434021905],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_7fe07650b4eb4ba08a2fd2c1bfa87c9d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_411f5cd30f02469ba7385ba5f41a1328 = $(`<div id="html_411f5cd30f02469ba7385ba5f41a1328" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/3635579"target="_blank">Spacious Room & Private Bath</a><br>Host: <a href="https://www.airbnb.com/users/show/274455"target="_blank">Eugenia</a></div>`)[0];
+            popup_7fe07650b4eb4ba08a2fd2c1bfa87c9d.setContent(html_411f5cd30f02469ba7385ba5f41a1328);
+        
+
+        circle_marker_315b519b37294523aff414d84728d20f.bindPopup(popup_7fe07650b4eb4ba08a2fd2c1bfa87c9d)
+        ;
+
+        
+    
+    
+            var circle_marker_cb887895d18940fc8fb86075bfe4b509 = L.circleMarker(
+                [45.53191898030711, -122.64842754117805],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_3b1aef5128734009bc72323569a593ca = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5e3009fb6d9641119bd1b3646abeb4f1 = $(`<div id="html_5e3009fb6d9641119bd1b3646abeb4f1" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/6019539"target="_blank">Private Suites near it all- Room #7</a><br>Host: <a href="https://www.airbnb.com/users/show/3029738"target="_blank">Phil</a></div>`)[0];
+            popup_3b1aef5128734009bc72323569a593ca.setContent(html_5e3009fb6d9641119bd1b3646abeb4f1);
+        
+
+        circle_marker_cb887895d18940fc8fb86075bfe4b509.bindPopup(popup_3b1aef5128734009bc72323569a593ca)
+        ;
+
+        
+    
+    
+            var circle_marker_263034992c6b44a38da233f4c5133342 = L.circleMarker(
+                [45.53118342392331, -122.63679555169615],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_8a9ca2c5636e494b894d4dc9643a6a44 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d820c3f886524411ae889234ada83b3c = $(`<div id="html_d820c3f886524411ae889234ada83b3c" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/11459090"target="_blank">Lloyd / Convention Center Modern Charmer</a><br>Host: <a href="https://www.airbnb.com/users/show/470854"target="_blank">Lydia</a></div>`)[0];
+            popup_8a9ca2c5636e494b894d4dc9643a6a44.setContent(html_d820c3f886524411ae889234ada83b3c);
+        
+
+        circle_marker_263034992c6b44a38da233f4c5133342.bindPopup(popup_8a9ca2c5636e494b894d4dc9643a6a44)
+        ;
+
+        
+    
+    
+            var circle_marker_6701211707334f2687c2d0f04ee8e76e = L.circleMarker(
+                [45.53333303138803, -122.64248066028328],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_28d34db0d3144adc8c8729e8a60b7e1f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_83705f0e15cd414f9d105a087206ccf7 = $(`<div id="html_83705f0e15cd414f9d105a087206ccf7" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/4209765"target="_blank">Oregon  Convention Center</a><br>Host: <a href="https://www.airbnb.com/users/show/1770933"target="_blank">Anastasia</a></div>`)[0];
+            popup_28d34db0d3144adc8c8729e8a60b7e1f.setContent(html_83705f0e15cd414f9d105a087206ccf7);
+        
+
+        circle_marker_6701211707334f2687c2d0f04ee8e76e.bindPopup(popup_28d34db0d3144adc8c8729e8a60b7e1f)
+        ;
+
+        
+    
+    
+            var circle_marker_7726e35dd77a468ab4e91e7e75bfc86d = L.circleMarker(
+                [45.53509971510614, -122.63842295787813],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_90e89ed99f184ced825ce69daf88dff2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f728972c33614f9ea8e54bcf092fd1fb = $(`<div id="html_f728972c33614f9ea8e54bcf092fd1fb" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/3835937"target="_blank">Close to downtown Portland </a><br>Host: <a href="https://www.airbnb.com/users/show/19756066"target="_blank">Randal</a></div>`)[0];
+            popup_90e89ed99f184ced825ce69daf88dff2.setContent(html_f728972c33614f9ea8e54bcf092fd1fb);
+        
+
+        circle_marker_7726e35dd77a468ab4e91e7e75bfc86d.bindPopup(popup_90e89ed99f184ced825ce69daf88dff2)
+        ;
+
+        
+    
+    
+            var circle_marker_7cc8f873b3e54419a3ab7de0f1734b39 = L.circleMarker(
+                [45.534176000789, -122.64692082305606],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_3a18f33f1d194affb92cc8cb490b3036 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8c7cd8ba994c41e6b869ea39c25612ce = $(`<div id="html_8c7cd8ba994c41e6b869ea39c25612ce" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/10907864"target="_blank">NE BUNK-HOUSE : Queen Bunk - BOTTOM</a><br>Host: <a href="https://www.airbnb.com/users/show/17261537"target="_blank">Ian & Sharmil</a></div>`)[0];
+            popup_3a18f33f1d194affb92cc8cb490b3036.setContent(html_8c7cd8ba994c41e6b869ea39c25612ce);
+        
+
+        circle_marker_7cc8f873b3e54419a3ab7de0f1734b39.bindPopup(popup_3a18f33f1d194affb92cc8cb490b3036)
+        ;
+
+        
+    
+    
+            var circle_marker_8f10f2adfce143cebd8501f72473e1c5 = L.circleMarker(
+                [45.53199202153486, -122.63751758894831],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_caef473e8dd64eb8a35f71ef4f8abef9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_73701376d9a4477c8f518c3e9a22831f = $(`<div id="html_73701376d9a4477c8f518c3e9a22831f" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/9260956"target="_blank">NE Getaway for the Creative Type</a><br>Host: <a href="https://www.airbnb.com/users/show/4547203"target="_blank">David</a></div>`)[0];
+            popup_caef473e8dd64eb8a35f71ef4f8abef9.setContent(html_73701376d9a4477c8f518c3e9a22831f);
+        
+
+        circle_marker_8f10f2adfce143cebd8501f72473e1c5.bindPopup(popup_caef473e8dd64eb8a35f71ef4f8abef9)
+        ;
+
+        
+    
+    
+            var circle_marker_296fa0dc74aa4ee7acf9afd3fd9ec2bc = L.circleMarker(
+                [45.533818148185404, -122.64176599914155],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_1c4a2e36f46748ed9e6a45c2cfeb1649 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3aaf7ad1b5764aedbe02506e4e0f41b2 = $(`<div id="html_3aaf7ad1b5764aedbe02506e4e0f41b2" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/14780717"target="_blank">Pension Portlandia: Close in Convenience</a><br>Host: <a href="https://www.airbnb.com/users/show/5670387"target="_blank">David And Debra</a></div>`)[0];
+            popup_1c4a2e36f46748ed9e6a45c2cfeb1649.setContent(html_3aaf7ad1b5764aedbe02506e4e0f41b2);
+        
+
+        circle_marker_296fa0dc74aa4ee7acf9afd3fd9ec2bc.bindPopup(popup_1c4a2e36f46748ed9e6a45c2cfeb1649)
+        ;
+
+        
+    
+    
+            var circle_marker_fc9963e207bf4346a520afb4bb65deb8 = L.circleMarker(
+                [45.532088343587645, -122.64674961230965],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_e55ef220f67e49c98037a4626111292a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e71b246808314fefabf79700164e1e8a = $(`<div id="html_e71b246808314fefabf79700164e1e8a" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/4917894"target="_blank">Private suite near it all- Room #1</a><br>Host: <a href="https://www.airbnb.com/users/show/3029738"target="_blank">Phil</a></div>`)[0];
+            popup_e55ef220f67e49c98037a4626111292a.setContent(html_e71b246808314fefabf79700164e1e8a);
+        
+
+        circle_marker_fc9963e207bf4346a520afb4bb65deb8.bindPopup(popup_e55ef220f67e49c98037a4626111292a)
+        ;
+
+        
+    
+    
+            var circle_marker_f8408418249f487994ec6aea64262a5c = L.circleMarker(
+                [45.53383491149948, -122.64759150177059],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_88928950c9d4495ca77a5370e75aee43 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e5bc861904dc4b819004f92d7c8f5b64 = $(`<div id="html_e5bc861904dc4b819004f92d7c8f5b64" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/2910295"target="_blank">Sullivan\'s Gulch New 1 BR apartment</a><br>Host: <a href="https://www.airbnb.com/users/show/14867883"target="_blank">Ann</a></div>`)[0];
+            popup_88928950c9d4495ca77a5370e75aee43.setContent(html_e5bc861904dc4b819004f92d7c8f5b64);
+        
+
+        circle_marker_f8408418249f487994ec6aea64262a5c.bindPopup(popup_88928950c9d4495ca77a5370e75aee43)
+        ;
+
+        
+    
+    
+            var circle_marker_3c7ac70b207b428eb42586aecfdb625e = L.circleMarker(
+                [45.53415374734954, -122.64842728103571],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_15e94ef6ac6e426fbbd7b89cd29d019b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b4dec6fb98b84e7a8c53e3a126ee00d9 = $(`<div id="html_b4dec6fb98b84e7a8c53e3a126ee00d9" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/15164727"target="_blank">NE BUNK-HOUSE : Single bed - BOTTOM</a><br>Host: <a href="https://www.airbnb.com/users/show/17261537"target="_blank">Ian & Sharmil</a></div>`)[0];
+            popup_15e94ef6ac6e426fbbd7b89cd29d019b.setContent(html_b4dec6fb98b84e7a8c53e3a126ee00d9);
+        
+
+        circle_marker_3c7ac70b207b428eb42586aecfdb625e.bindPopup(popup_15e94ef6ac6e426fbbd7b89cd29d019b)
+        ;
+
+        
+    
+    
+            var circle_marker_054d130c88fc4d409a6a1d689ad2c354 = L.circleMarker(
+                [45.533279758803026, -122.64786231653144],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_551cbcc9b8544c6a9ac9bb0d60c1c124 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1f96a5cf41e34eb18c33473a2b9ec7b9 = $(`<div id="html_1f96a5cf41e34eb18c33473a2b9ec7b9" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/4918034"target="_blank">Private suites near it all- Room #2</a><br>Host: <a href="https://www.airbnb.com/users/show/3029738"target="_blank">Phil</a></div>`)[0];
+            popup_551cbcc9b8544c6a9ac9bb0d60c1c124.setContent(html_1f96a5cf41e34eb18c33473a2b9ec7b9);
+        
+
+        circle_marker_054d130c88fc4d409a6a1d689ad2c354.bindPopup(popup_551cbcc9b8544c6a9ac9bb0d60c1c124)
+        ;
+
+        
+    
+    
+            var circle_marker_1a29ecc98bc244a5b9f90e74e42bdb68 = L.circleMarker(
+                [45.535768148128525, -122.61622198825987],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_27875c3ca9664f4bb872449933eff9fd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_df831804d8e24bf8a1d464143e11c654 = $(`<div id="html_df831804d8e24bf8a1d464143e11c654" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/6031121"target="_blank">Private room modern 1924 Craftsman</a><br>Host: <a href="https://www.airbnb.com/users/show/9388547"target="_blank">Arian</a></div>`)[0];
+            popup_27875c3ca9664f4bb872449933eff9fd.setContent(html_df831804d8e24bf8a1d464143e11c654);
+        
+
+        circle_marker_1a29ecc98bc244a5b9f90e74e42bdb68.bindPopup(popup_27875c3ca9664f4bb872449933eff9fd)
+        ;
+
+        
+    
+    
+            var circle_marker_132862899c5c411f8a481d40d29bbf83 = L.circleMarker(
+                [45.53679654660679, -122.623548325164],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_89011577e5df46a9816d6b6645367b06 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_62d4a58c641d4176a98b93d6529bfe90 = $(`<div id="html_62d4a58c641d4176a98b93d6529bfe90" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/1850556"target="_blank">The Nest</a><br>Host: <a href="https://www.airbnb.com/users/show/9663989"target="_blank">Laura</a></div>`)[0];
+            popup_89011577e5df46a9816d6b6645367b06.setContent(html_62d4a58c641d4176a98b93d6529bfe90);
+        
+
+        circle_marker_132862899c5c411f8a481d40d29bbf83.bindPopup(popup_89011577e5df46a9816d6b6645367b06)
+        ;
+
+        
+    
+    
+            var circle_marker_a47384cd45824fd6afca28d3d90a45d0 = L.circleMarker(
+                [45.53757695466487, -122.6220366093606],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_50a5dccfca4240d9a1f882aaa71d4a34 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d53957eca2d84f2e95b3814de3a310c3 = $(`<div id="html_d53957eca2d84f2e95b3814de3a310c3" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/14995423"target="_blank">The Vintage Getaway!</a><br>Host: <a href="https://www.airbnb.com/users/show/8926269"target="_blank">Lora</a></div>`)[0];
+            popup_50a5dccfca4240d9a1f882aaa71d4a34.setContent(html_d53957eca2d84f2e95b3814de3a310c3);
+        
+
+        circle_marker_a47384cd45824fd6afca28d3d90a45d0.bindPopup(popup_50a5dccfca4240d9a1f882aaa71d4a34)
+        ;
+
+        
+    
+    
+            var circle_marker_50be8936ad334a27963f8f7ed0b022b3 = L.circleMarker(
+                [45.532129721792685, -122.61576947017772],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_16d0dfa26087422ebc77be6a74c03f5a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1b49e39e17c94817a7bed1f69a07b703 = $(`<div id="html_1b49e39e17c94817a7bed1f69a07b703" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/4811271"target="_blank">Full home centrally located in NE Portland</a><br>Host: <a href="https://www.airbnb.com/users/show/11306582"target="_blank">Josh</a></div>`)[0];
+            popup_16d0dfa26087422ebc77be6a74c03f5a.setContent(html_1b49e39e17c94817a7bed1f69a07b703);
+        
+
+        circle_marker_50be8936ad334a27963f8f7ed0b022b3.bindPopup(popup_16d0dfa26087422ebc77be6a74c03f5a)
+        ;
+
+        
+    
+    
+            var circle_marker_de7f312360094c658694aeef2337e236 = L.circleMarker(
+                [45.52649365445864, -122.70887091687528],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_039a341cd506470789eb926367ea5e04 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1e331d4aba0245d78058719fdd6de47e = $(`<div id="html_1e331d4aba0245d78058719fdd6de47e" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/14961205"target="_blank">NW Portland\'s Stairway to Heaven</a><br>Host: <a href="https://www.airbnb.com/users/show/17889445"target="_blank">Amy</a></div>`)[0];
+            popup_039a341cd506470789eb926367ea5e04.setContent(html_1e331d4aba0245d78058719fdd6de47e);
+        
+
+        circle_marker_de7f312360094c658694aeef2337e236.bindPopup(popup_039a341cd506470789eb926367ea5e04)
+        ;
+
+        
+    
+    
+            var circle_marker_46aeb9173a794d05a6e8f6d481800967 = L.circleMarker(
+                [45.525760598562925, -122.71160615045014],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_df8194235e2447c19a03ca58e9aba339 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2c4154fa44b14507b06c0200c54002ab = $(`<div id="html_2c4154fa44b14507b06c0200c54002ab" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/6951336"target="_blank">City Lights, Hikes, Sites & Bites</a><br>Host: <a href="https://www.airbnb.com/users/show/36444548"target="_blank">Sharon</a></div>`)[0];
+            popup_df8194235e2447c19a03ca58e9aba339.setContent(html_2c4154fa44b14507b06c0200c54002ab);
+        
+
+        circle_marker_46aeb9173a794d05a6e8f6d481800967.bindPopup(popup_df8194235e2447c19a03ca58e9aba339)
+        ;
+
+        
+    
+    
+            var circle_marker_1421d70f6d274b81acf5e49b453b0b67 = L.circleMarker(
+                [45.527526315707064, -122.70685139295804],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_4ef80cee30b7470f9e529a46a11adffd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2b4bf853672a478f99fe11c1e992e868 = $(`<div id="html_2b4bf853672a478f99fe11c1e992e868" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/692488"target="_blank">Classic Northwest Villa</a><br>Host: <a href="https://www.airbnb.com/users/show/3541177"target="_blank">Jerry</a></div>`)[0];
+            popup_4ef80cee30b7470f9e529a46a11adffd.setContent(html_2b4bf853672a478f99fe11c1e992e868);
+        
+
+        circle_marker_1421d70f6d274b81acf5e49b453b0b67.bindPopup(popup_4ef80cee30b7470f9e529a46a11adffd)
+        ;
+
+        
+    
+    
+            var circle_marker_4a995a0d3e7f48668b247e103d5c7cbf = L.circleMarker(
+                [45.52535925370734, -122.7080137198179],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_8068d97802364f189e21110eb93392b7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5013ea3d161245cc8d8869c54b4781b7 = $(`<div id="html_5013ea3d161245cc8d8869c54b4781b7" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/15289907"target="_blank">Best of both worlds</a><br>Host: <a href="https://www.airbnb.com/users/show/4267438"target="_blank">Marco</a></div>`)[0];
+            popup_8068d97802364f189e21110eb93392b7.setContent(html_5013ea3d161245cc8d8869c54b4781b7);
+        
+
+        circle_marker_4a995a0d3e7f48668b247e103d5c7cbf.bindPopup(popup_8068d97802364f189e21110eb93392b7)
+        ;
+
+        
+    
+    
+            var circle_marker_297d9cb3911644a8943eda262dd3d7a2 = L.circleMarker(
+                [45.528018350744865, -122.71467478481155],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_4a9b9cc595ff4bb4be0ace7b7d91afb8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5cb1fdf6e693405c955954c821592545 = $(`<div id="html_5cb1fdf6e693405c955954c821592545" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/15322591"target="_blank">Paradise in Forest Park, Close to Downtown Sh</a><br>Host: <a href="https://www.airbnb.com/users/show/4209393"target="_blank">Lisa</a></div>`)[0];
+            popup_4a9b9cc595ff4bb4be0ace7b7d91afb8.setContent(html_5cb1fdf6e693405c955954c821592545);
+        
+
+        circle_marker_297d9cb3911644a8943eda262dd3d7a2.bindPopup(popup_4a9b9cc595ff4bb4be0ace7b7d91afb8)
+        ;
+
+        
+    
+    
+            var circle_marker_da573485f890440f85a9fcbdef6a8a1f = L.circleMarker(
+                [45.524274229357005, -122.70850863981786],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_8c4040de0a93483388f9c1f0430b7f85 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bcdcfcbeea2e45eab6b5368e3998ba9b = $(`<div id="html_bcdcfcbeea2e45eab6b5368e3998ba9b" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/1056736"target="_blank">Euro/Modern studio w/ own private entry & kit</a><br>Host: <a href="https://www.airbnb.com/users/show/5820535"target="_blank">Scott</a></div>`)[0];
+            popup_8c4040de0a93483388f9c1f0430b7f85.setContent(html_bcdcfcbeea2e45eab6b5368e3998ba9b);
+        
+
+        circle_marker_da573485f890440f85a9fcbdef6a8a1f.bindPopup(popup_8c4040de0a93483388f9c1f0430b7f85)
+        ;
+
+        
+    
+    
+            var circle_marker_9b03f57f2f9942ce9658029bd0f3ecf0 = L.circleMarker(
+                [45.52135676815572, -122.72579967896546],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_2002581980d140138f0e049a075ae2c0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_749dfb61bc93435ebe8bf48497ba11bf = $(`<div id="html_749dfb61bc93435ebe8bf48497ba11bf" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/14267365"target="_blank">NW Portland Hillside Hideaway Suite</a><br>Host: <a href="https://www.airbnb.com/users/show/8166871"target="_blank">Ed & Kyle</a></div>`)[0];
+            popup_2002581980d140138f0e049a075ae2c0.setContent(html_749dfb61bc93435ebe8bf48497ba11bf);
+        
+
+        circle_marker_9b03f57f2f9942ce9658029bd0f3ecf0.bindPopup(popup_2002581980d140138f0e049a075ae2c0)
+        ;
+
+        
+    
+    
+            var circle_marker_d0ee805b18064400806c7cc89d6a379b = L.circleMarker(
+                [45.512285279353144, -122.738680534454],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_adf42d6e565b42e0a59f1ec47270b1cc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e92a3acdcf534853ad9daff5cc0e52de = $(`<div id="html_e92a3acdcf534853ad9daff5cc0e52de" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/4493001"target="_blank">Mad Court House - Private Apartment</a><br>Host: <a href="https://www.airbnb.com/users/show/22904946"target="_blank">Zoe And Sibyl</a></div>`)[0];
+            popup_adf42d6e565b42e0a59f1ec47270b1cc.setContent(html_e92a3acdcf534853ad9daff5cc0e52de);
+        
+
+        circle_marker_d0ee805b18064400806c7cc89d6a379b.bindPopup(popup_adf42d6e565b42e0a59f1ec47270b1cc)
+        ;
+
+        
+    
+    
+            var circle_marker_eed6a813517545e9982d1cfb0e4bddbe = L.circleMarker(
+                [45.51882025827295, -122.72744648510994],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_3eb4168fa587402695985d61dced7f42 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fc04387257c244388417569da7303971 = $(`<div id="html_fc04387257c244388417569da7303971" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/8811960"target="_blank">Bedroom with bath and 2 beds</a><br>Host: <a href="https://www.airbnb.com/users/show/22562487"target="_blank">Cole</a></div>`)[0];
+            popup_3eb4168fa587402695985d61dced7f42.setContent(html_fc04387257c244388417569da7303971);
+        
+
+        circle_marker_eed6a813517545e9982d1cfb0e4bddbe.bindPopup(popup_3eb4168fa587402695985d61dced7f42)
+        ;
+
+        
+    
+    
+            var circle_marker_fbd2e2f05f344b49b1419113a2c1878a = L.circleMarker(
+                [45.51403407066715, -122.73724821875206],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_a67797376dcc430a81ad45bf1f51ccd5 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e74b147a168b46a9aa91c0ea140af482 = $(`<div id="html_e74b147a168b46a9aa91c0ea140af482" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/6055815"target="_blank">Sylvan Highlands Homestead Retreat</a><br>Host: <a href="https://www.airbnb.com/users/show/24453020"target="_blank">Kelly</a></div>`)[0];
+            popup_a67797376dcc430a81ad45bf1f51ccd5.setContent(html_e74b147a168b46a9aa91c0ea140af482);
+        
+
+        circle_marker_fbd2e2f05f344b49b1419113a2c1878a.bindPopup(popup_a67797376dcc430a81ad45bf1f51ccd5)
+        ;
+
+        
+    
+    
+            var circle_marker_e1e2a12f57db446dbe1c87d890c5eaf7 = L.circleMarker(
+                [45.51586069854444, -122.73664411238038],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_7f2190cca8fe4950baea252851f6ed56 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_617319367be241f5a7c1d6ac125897b9 = $(`<div id="html_617319367be241f5a7c1d6ac125897b9" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/6836685"target="_blank">MidCentury View Home - Pvt. Floor</a><br>Host: <a href="https://www.airbnb.com/users/show/2000049"target="_blank">Adam</a></div>`)[0];
+            popup_7f2190cca8fe4950baea252851f6ed56.setContent(html_617319367be241f5a7c1d6ac125897b9);
+        
+
+        circle_marker_e1e2a12f57db446dbe1c87d890c5eaf7.bindPopup(popup_7f2190cca8fe4950baea252851f6ed56)
+        ;
+
+        
+    
+    
+            var circle_marker_43ea295221fc4aa5bf2ce1a30fa2c8bb = L.circleMarker(
+                [45.51180329783527, -122.73568380262827],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_fd2019fd9f4d4a6eb78054ba3dff1f74 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7abd469503e442318eb9b681d152c42b = $(`<div id="html_7abd469503e442318eb9b681d152c42b" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/9732892"target="_blank">Quiet, convenient & comfortable!</a><br>Host: <a href="https://www.airbnb.com/users/show/22298379"target="_blank">Marcelo</a></div>`)[0];
+            popup_fd2019fd9f4d4a6eb78054ba3dff1f74.setContent(html_7abd469503e442318eb9b681d152c42b);
+        
+
+        circle_marker_43ea295221fc4aa5bf2ce1a30fa2c8bb.bindPopup(popup_fd2019fd9f4d4a6eb78054ba3dff1f74)
+        ;
+
+        
+    
+    
+            var circle_marker_625eb5df51f1476280842b05e93bceb3 = L.circleMarker(
+                [45.576518568648545, -122.69558207581815],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_8b2982d08da445778090e517baad8d8d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_14328cc4911b4c4392fe2c5621c032b7 = $(`<div id="html_14328cc4911b4c4392fe2c5621c032b7" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/17125465"target="_blank">Arbor Lodge Craftsman Bungalow</a><br>Host: <a href="https://www.airbnb.com/users/show/69066016"target="_blank">Gina</a></div>`)[0];
+            popup_8b2982d08da445778090e517baad8d8d.setContent(html_14328cc4911b4c4392fe2c5621c032b7);
+        
+
+        circle_marker_625eb5df51f1476280842b05e93bceb3.bindPopup(popup_8b2982d08da445778090e517baad8d8d)
+        ;
+
+        
+    
+    
+            var circle_marker_d1efef99a9d54c4d9d459b664f450405 = L.circleMarker(
+                [45.576329184251605, -122.69544563086485],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_c200869e44be4550afa60fb272726ada = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d306577ff27e4527aa6d6f4492646726 = $(`<div id="html_d306577ff27e4527aa6d6f4492646726" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/6939930"target="_blank">Greeley Manor Garden Suite 1</a><br>Host: <a href="https://www.airbnb.com/users/show/13611696"target="_blank">John</a></div>`)[0];
+            popup_c200869e44be4550afa60fb272726ada.setContent(html_d306577ff27e4527aa6d6f4492646726);
+        
+
+        circle_marker_d1efef99a9d54c4d9d459b664f450405.bindPopup(popup_c200869e44be4550afa60fb272726ada)
+        ;
+
+        
+    
+    
+            var circle_marker_d026ed3100a544b5b9ac5d4de6148fc7 = L.circleMarker(
+                [45.56857104560813, -122.69828592374856],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_1c8b0adcf1774d92ad2a12749c5c4e88 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8450513307914e949a6497effc1404ec = $(`<div id="html_8450513307914e949a6497effc1404ec" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/15411427"target="_blank">Arbor Lodge Guest House - Wanderer\'s Delight </a><br>Host: <a href="https://www.airbnb.com/users/show/76940848"target="_blank">Natasha</a></div>`)[0];
+            popup_1c8b0adcf1774d92ad2a12749c5c4e88.setContent(html_8450513307914e949a6497effc1404ec);
+        
+
+        circle_marker_d026ed3100a544b5b9ac5d4de6148fc7.bindPopup(popup_1c8b0adcf1774d92ad2a12749c5c4e88)
+        ;
+
+        
+    
+    
+            var circle_marker_09ecc6a679da4e6d920c2765cae8f19a = L.circleMarker(
+                [45.57294447654001, -122.6882270376268],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_3890645436be4fe5821bbe311d7eea3c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3677565341e84a77905703c8704d8045 = $(`<div id="html_3677565341e84a77905703c8704d8045" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/7292504"target="_blank">Saratoga Sweetness: cozy & quiet with private</a><br>Host: <a href="https://www.airbnb.com/users/show/36446072"target="_blank">Pamela</a></div>`)[0];
+            popup_3890645436be4fe5821bbe311d7eea3c.setContent(html_3677565341e84a77905703c8704d8045);
+        
+
+        circle_marker_09ecc6a679da4e6d920c2765cae8f19a.bindPopup(popup_3890645436be4fe5821bbe311d7eea3c)
+        ;
+
+        
+    
+    
+            var circle_marker_0c75b93c1dd24635878bc5215d40acff = L.circleMarker(
+                [45.5751526468361, -122.69758900667944],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_7cd7128eb69b40aea0e39fab6ae36c5a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e7c1a99da5fa469cb8b77df5573fb026 = $(`<div id="html_e7c1a99da5fa469cb8b77df5573fb026" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/14031109"target="_blank">Peaceful garden bedroom in NoPo</a><br>Host: <a href="https://www.airbnb.com/users/show/23135284"target="_blank">Alyssa</a></div>`)[0];
+            popup_7cd7128eb69b40aea0e39fab6ae36c5a.setContent(html_e7c1a99da5fa469cb8b77df5573fb026);
+        
+
+        circle_marker_0c75b93c1dd24635878bc5215d40acff.bindPopup(popup_7cd7128eb69b40aea0e39fab6ae36c5a)
+        ;
+
+        
+    
+    
+            var circle_marker_03038f58ad294a7d8a5310ae7060b5f0 = L.circleMarker(
+                [45.56960819596304, -122.69311586861757],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_efa26613eb294afda658cc7c8c9a0bb1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c8b52b51d5314caa94a102fbd94ec6c5 = $(`<div id="html_c8b52b51d5314caa94a102fbd94ec6c5" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/7743660"target="_blank">Spacious Apartment in Arbor Lodge</a><br>Host: <a href="https://www.airbnb.com/users/show/20590539"target="_blank">Zach</a></div>`)[0];
+            popup_efa26613eb294afda658cc7c8c9a0bb1.setContent(html_c8b52b51d5314caa94a102fbd94ec6c5);
+        
+
+        circle_marker_03038f58ad294a7d8a5310ae7060b5f0.bindPopup(popup_efa26613eb294afda658cc7c8c9a0bb1)
+        ;
+
+        
+    
+    
+            var circle_marker_d1b5238d881a4121a3692724373cb310 = L.circleMarker(
+                [45.573260282576285, -122.68489417816963],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_98136ce7016343558f20fcd4c95299d7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_66b60d93edc1404cbb5fb337cd1162a4 = $(`<div id="html_66b60d93edc1404cbb5fb337cd1162a4" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/17849874"target="_blank">Garden Bungalow</a><br>Host: <a href="https://www.airbnb.com/users/show/1391205"target="_blank">Clarissa</a></div>`)[0];
+            popup_98136ce7016343558f20fcd4c95299d7.setContent(html_66b60d93edc1404cbb5fb337cd1162a4);
+        
+
+        circle_marker_d1b5238d881a4121a3692724373cb310.bindPopup(popup_98136ce7016343558f20fcd4c95299d7)
+        ;
+
+        
+    
+    
+            var circle_marker_03d24f34337f4b9faca3ce58ed753b3c = L.circleMarker(
+                [45.57052285948791, -122.69865204585341],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#000000", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 0}
+            ).addTo(map_fa399e79ec744c57aa51d8df2f74df0a);
+        
+    
+        var popup_52f43d8c37c9426d99b4facad8ddddbc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_dd1ff6f6eee7423bbca57adf99423000 = $(`<div id="html_dd1ff6f6eee7423bbca57adf99423000" style="width: 100.0%; height: 100.0%;">Listing: <a href="https://www.airbnb.com/rooms/15411232"target="_blank">Arbor Lodge Guest House - The Sun Room</a><br>Host: <a href="https://www.airbnb.com/users/show/76940848"target="_blank">Natasha</a></div>`)[0];
+            popup_52f43d8c37c9426d99b4facad8ddddbc.setContent(html_dd1ff6f6eee7423bbca57adf99423000);
+        
+
+        circle_marker_03d24f34337f4b9faca3ce58ed753b3c.bindPopup(popup_52f43d8c37c9426d99b4facad8ddddbc)
+        ;
+
+        
+    
+    
+            map_fa399e79ec744c57aa51d8df2f74df0a.fitBounds(
+                [[45.51180329783527, -122.738680534454], [45.576518568648545, -122.61576947017772]],
+                {}
+            );
+        
+</script>
