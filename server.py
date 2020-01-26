@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify, send_from_directory, redirect
+from flask import Flask, render_template, request, jsonify, send_from_directory, redirect, url_for
 import os
 import requests
 import json
@@ -14,10 +14,12 @@ import pygeoip
 
 root_dir = '/home/ec2-user/site/MH20'
 app = Flask("SickoMode")
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 #gi = pygeoip.GeoIP()
 #simple_geoip = SimpleGeoIP(app)
 API_KEY = 'b5998aa55f5d387b5df67e92e82d00e9'
 
+test_global = None
 
 disease_map = build_disease_map()
 apimedic.init_obj()
@@ -97,19 +99,13 @@ def upload_data():
     x = mycol.insert_one(data)
 
 
-    if confirmed == 'n':
-        return redirect(url_for('get_name', diagnosis=dis_json))
-
-    print(x)
-    return redirect("./", code=302)
+    if confirmed == 'y':
+        return redirect("./", code=302)
 
 
-
-@app.route("/get_name", methods=['GET'])
-def get_name():
-    diagnosis = request.args.get('diagnosis')
+    diseases = dis_json
+    print(diseases)
     final = []
-    diseases = request.args.get('diseases')
     for dis in diseases:
         final.append({'Name': disease_map[dis['ID']], 'Prob': dis['Prob']})
 
@@ -120,34 +116,35 @@ def get_name():
         l = len(final)
     html = '<span class="contact100-form-title">'
     html += ''' You Matched With '''
-    html += l 
+    html += str(l) 
     html += ''' Diseases...
                                 </span>
                         <table style="width: 100%" frame=void border=1 rules=rows>'''
-    for dis in final:
+    for dis in range(l):
         html += '''<tr>
                         <td class="results"> '''
-        html += dis['Name']
+        html += final[dis]['Name']
         html += ''' </td>
                         <td class="percent results"> '''
-        html += dis['Prob']
+        html += str(final[dis]['Prob'])
         html += '''%</td>
                         </tr>'''
 
     html += '''</table>'''
 
-    phrase = '''class="wrap-contact100">'''
+    #phrase = '''class="wrap-contact100">'''
 
-    with open('templates/results.html') as f:
-        file = f.read()
-        i1 = file.index(phrase)
-        i1 += 23
-        file = file[:i1] + html + file[i1:]
-    fp = open('./templates/results.html', 'w')
-    fp.write(file)
-    fp.close()
-
-    return render_template('/results.html')
+    #with open('templates/results.html') as f:
+    #    file = f.read()
+    #    i1 = file.index(phrase)
+    #    i1 += 24
+    #    file = file[:i1] + html + file[i1:]
+    #fp = open('./templates/results2.html', 'w')
+    #fp.write(file)
+    #fp.flush()
+    #os.fsync(fp)
+    #fp.close()
+    return render_template('/results2.html', table=html)
 
 @app.errorhandler(403)
 def page_not_found(e):
