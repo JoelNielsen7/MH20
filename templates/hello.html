@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<head>  <link href="{{ url_for('static', filename='css/home_style.css') }}" rel="stylesheet">    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1b826c7fc46f463d9ee3e43946182393 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>  <nav>
+      <ul class="nav">
+        <li><a href=./>Home</a></li>
+        <li><a href=./form.html>Submit Symptoms</a></li>
+        <li><a href=./about.html>About</a></li>
+      </ul>
+    </nav>
+   
+    
+            <div class="folium-map" id="map_1b826c7fc46f463d9ee3e43946182393" ></div>
+        
+</body>
+<script>    
+    
+            var map_1b826c7fc46f463d9ee3e43946182393 = L.map(
+                "map_1b826c7fc46f463d9ee3e43946182393",
+                {
+                    center: [0, 0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 1,
+                    zoomControl: true,
+                    preferCanvas: true,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_984f37c3911c4ca89ff5c1259e2940de = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1b826c7fc46f463d9ee3e43946182393);
+        
+    
+            var tile_layer_fe96aea72fbb41fb8440ed6b0267aa42 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1b826c7fc46f463d9ee3e43946182393);
+        
+    
+            var circle_marker_e3749c489d6a47c7be4fc3e5afe4f2b1 = L.circleMarker(
+                [44.98050843677087, -93.22381636866623],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#336600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 102.33004968952758, "stroke": true, "weight": 1}
+            ).addTo(map_1b826c7fc46f463d9ee3e43946182393);
+        
+    
+        var popup_a85b870099e142d091cb695d82e95cfa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_58b47bd564e14ed4ae014f42cbf46bec = $(`<div id="html_58b47bd564e14ed4ae014f42cbf46bec" style="width: 100.0%; height: 100.0%;">Listing: <a href="adsf"target="_blank">buttwhole aids</a><br>Host: <a href="hey"target="_blank">15 people died</a></div>`)[0];
+            popup_a85b870099e142d091cb695d82e95cfa.setContent(html_58b47bd564e14ed4ae014f42cbf46bec);
+        
+
+        circle_marker_e3749c489d6a47c7be4fc3e5afe4f2b1.bindPopup(popup_a85b870099e142d091cb695d82e95cfa)
+        ;
+
+        
+    
+    
+            var circle_marker_4c92fa50efca43f4b1b9bf8e1af9cba3 = L.circleMarker(
+                [44.95663642789118, -93.23224181739329],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#336600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.918680756834128, "stroke": true, "weight": 1}
+            ).addTo(map_1b826c7fc46f463d9ee3e43946182393);
+        
+    
+        var popup_063d92b4f4414f3190f6f46a717d5c15 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_77f7f53e6d3249dca75776be1a42732a = $(`<div id="html_77f7f53e6d3249dca75776be1a42732a" style="width: 100.0%; height: 100.0%;">Listing: <a href="adsf"target="_blank">buttwhole aids</a><br>Host: <a href="hey"target="_blank">15 people died</a></div>`)[0];
+            popup_063d92b4f4414f3190f6f46a717d5c15.setContent(html_77f7f53e6d3249dca75776be1a42732a);
+        
+
+        circle_marker_4c92fa50efca43f4b1b9bf8e1af9cba3.bindPopup(popup_063d92b4f4414f3190f6f46a717d5c15)
+        ;
+
+        
+    
+    
+            var circle_marker_5c7d8b40aef0496d85f37b2013c3e291 = L.circleMarker(
+                [44.91023637815164, -93.4754213779675],
+                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#336600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 369.0906805833638, "stroke": true, "weight": 1}
+            ).addTo(map_1b826c7fc46f463d9ee3e43946182393);
+        
+    
+        var popup_b3e7bdee276a4437bd1bdebef2671640 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0d354964b37145729247cf8560513195 = $(`<div id="html_0d354964b37145729247cf8560513195" style="width: 100.0%; height: 100.0%;">Listing: <a href="adsf"target="_blank">buttwhole aids</a><br>Host: <a href="hey"target="_blank">15 people died</a></div>`)[0];
+            popup_b3e7bdee276a4437bd1bdebef2671640.setContent(html_0d354964b37145729247cf8560513195);
+        
+
+        circle_marker_5c7d8b40aef0496d85f37b2013c3e291.bindPopup(popup_b3e7bdee276a4437bd1bdebef2671640)
+        ;
+
+        
+    
+    
+            map_1b826c7fc46f463d9ee3e43946182393.fitBounds(
+                [[44.91023637815164, -93.4754213779675], [44.98050843677087, -93.22381636866623]],
+                {}
+            );
+        
+</script>
