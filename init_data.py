@@ -163,6 +163,5 @@ mycol = mydb["Diseases"]
 
 x = mycol.insert_many(init_data)
 #
-print(x)
 
 #print(init_data)
