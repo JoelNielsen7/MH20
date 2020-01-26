@@ -14,21 +14,15 @@ def create_geojson_features(df):
     features = []
     map = build_disease_map()
     x = 0
-    color = ["#8FC6B4","#BAC39F","#E5B374","#F99D78","#829C9C"]
+    color = ["#8FC6B4","#BAC39F","#E5B374","#F99D78","#829C9C", "#E4C678", "#D25A43", "#3C7769", "#26AA4A", "#D88284", "#D9D83C", "#22C941", "#354B66", "#75CDC6"]
+    disList = []
     for _, row in df.iterrows():
 
         dis = map[row["id"]]
-        if dis == "Flu":
-            colorr = color[0]
-        elif dis == "Pink eye":
-            colorr = color[1]
-        elif dis == "Food poisoning":
-            colorr = color[2]
-        elif dis == "Arthrosis":
-            colorr = color[3]
+        if dis in disList:
+            pass
         else:
-            colorr = color[4]
-
+            disList.append(dis)
 
         feature = {
             'type': 'Feature',
@@ -38,11 +32,11 @@ def create_geojson_features(df):
             },
             'properties': {
                 'time': row['std'].date().__str__(),
-                'style': {'color' : colorr},
+                'style': {'color' : color[disList.index(dis)]},
                 'icon': 'circle',
-                'popup': "<a href = https://www.webmd.com/search/search_results/default.aspx?query="+ dis.replace(" ",'_') +">"+ dis + ", Count in area: "+ str(row['date']) +"</a>",
+                'popup': " <b>Warning: " + str(row['date']) + " cases of <u>" + dis +"</u> reported in this area. </b <br><a href = https://www.webmd.com/search/search_results/default.aspx?query="+ dis.replace(" ",'_') +"> Learn more here </a>",
                 'iconstyle':{
-                    'fillColor': colorr,
+                    'fillColor': color[disList.index(dis)],
                     'fillOpacity': .6,
                     'stroke': 'False',
                     'radius': (1000 * float(row['name']))
@@ -54,8 +48,8 @@ def create_geojson_features(df):
     return features
 
 def make_map(features):
-    coords=[44.973516, -93.256018]
-    this_map = folium.Map(location=coords, control_scale=True, zoom_start=10)
+    coords=[44.958057, -93.265234]
+    this_map = folium.Map(location=coords, control_scale=True, zoom_start=11)
     folium.TileLayer('cartodbpositron').add_to(this_map)
 
     temp = TimestampedGeoJson(
