@@ -28,7 +28,7 @@ flu = {
 }
 
 flu_center = [44.974331, -93.227279]
-flu_radius = 0.02
+flu_radius = 0.02 * 2
 
 """
 food = {
@@ -47,7 +47,7 @@ food = {
 }
 
 food_center = [44.949251, -93.234097]
-food_radius = 0.005
+food_radius = 0.005 * 2
 
 """
 pink = {
@@ -66,7 +66,7 @@ pink = {
 }
 
 pink_center = [44.920959, -93.466897]
-pink_radius = 0.08
+pink_radius = 0.08 * 2
 
 
 init_data = []
@@ -93,7 +93,7 @@ for i in range(35):
         "Age": age,
         "Symptoms": [],
         "Confirmed": confirmed,
-        "Date": "2020-01-25 21:59:18.197503",
+        "Date": "2020-01-26 03:58:59.140724",
         "Diseases": flu["Diseases"]
     }
 
@@ -122,7 +122,7 @@ for i in range(5):
         "Age": age,
         "Symptoms": [],
         "Confirmed": confirmed,
-        "Date": "2020-01-25 21:59:18.197503",
+        "Date": "2020-01-26 03:58:59.140724",
         "Diseases": food["Diseases"]
     }
 
@@ -150,7 +150,7 @@ for i in range(20):
         "Age": age,
         "Symptoms": [],
         "Confirmed": confirmed,
-        "Date": "2020-01-25 21:59:18.197503",
+        "Date": "2020-01-26 03:58:59.140724",
         "Diseases": pink["Diseases"]
     }
 

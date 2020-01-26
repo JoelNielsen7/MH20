@@ -39,3 +39,37 @@ def get_db():
 
     return(df)
 
+
+
+def get_db_two():
+    myclient = pymongo.MongoClient("mongodb+srv://SickoMode:SickoMode@cluster0-zfxxk.mongodb.net/test?retryWrites=true&w=majority")
+    # db = myclient.test
+    # print(db)
+    # dblist = myclient.list_database_names()
+    # print(dblist)
+    mydb = myclient["SickoMode"]
+    mycol = mydb["dots"]
+
+    x = mycol.find()
+    bigboy = []
+
+    for row in x:
+        lilist = []
+        for key in row.keys():
+            lilist.append(row[key])
+
+        bigboy.append(lilist)
+
+    df = pd.DataFrame(bigboy,
+                      columns=["useless", 'latitude', 'longitude', 'id', 'name', 'std', 'date',],
+                      dtype=int)
+
+    return df
+
+
+
+
+
+
+
+get_db_two()
