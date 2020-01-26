@@ -7,6 +7,7 @@ from symptoms import build_symptom_map
 from diseases import build_disease_map
 from datetime import datetime
 from map_testing import get_curdata, get_html
+import apimedic
 #from flask_simple_geoip import SimpleGeoIP
 #from flask.ext.geoip import GeoIP
 import pygeoip
@@ -16,6 +17,10 @@ app = Flask("SickoMode")
 #gi = pygeoip.GeoIP()
 #simple_geoip = SimpleGeoIP(app)
 API_KEY = 'b5998aa55f5d387b5df67e92e82d00e9'
+
+
+disease_map = build_disease_map()
+
 @app.route("/", methods=['GET', 'POST'])
 def home():
     data = get_curdata()
@@ -69,7 +74,7 @@ def upload_data():
     dis_json = [{'ID': disease[0], 'Prob': 100}]
 
     if confirmed == 'n':
-        dis_json = []
+        dis_json = api_medic.get_diagnosis(gender, age, symptoms)
 
     myclient = pymongo.MongoClient("mongodb+srv://SickoMode:SickoMode@cluster0-zfxxk.mongodb.net/test?retryWrites=true&w=majority")
 
@@ -89,9 +94,25 @@ def upload_data():
     print(data)
     x = mycol.insert_one(data)
 
+
+    
+
     print(x)
     return redirect("./", code=302)
 
+
+
+@app.route("/get_name", methods=['GET'])
+def get_name():
+    diagnosis = request.args.get('diagnosis')
+    final = []
+    diseases = request.args.get('diseases')
+    for dis in diseases:
+        final.append({'Name': disease_map[dis['ID']], 'Prob': dis['Prob']})
+
+    
+
+    
 
 @app.errorhandler(403)
 def page_not_found(e):
@@ -111,7 +132,7 @@ def get_diseases():
 
 @app.route("/get_hello", methods=['GET'])
 def get_hello():
-    return render_template('/hello.html')
+    return render_template('/results.html')
 
 if __name__ == "__main__":
     # Run app

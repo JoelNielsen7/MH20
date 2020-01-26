@@ -30,3 +30,11 @@ li.bar a.bar:hover {
 .contact100-form-title{
 font-size: 32px;
 }
+
+.percent{
+text-align: right;
+}
+
+.results{
+font-size: 30px;
+}
