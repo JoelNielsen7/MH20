@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_1b826c7fc46f463d9ee3e43946182393 {
+                #map_789b4bf6ff274bf4af02fc376cdd3852 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -34,21 +34,21 @@
         
 </head>
 <body>  <nav>
-      <ul class="nav">
-        <li><a href=./>Home</a></li>
-        <li><a href=./form.html>Submit Symptoms</a></li>
-        <li><a href=./about.html>About</a></li>
+      <ul class="bar nav">
+        <li class="bar"><a href=./ class="active_bar bar">Home</a></li>
+        <li class="bar"><a href=./form class="bar">Submit Symptoms</a></li>
+        <li class="bar"><a href=./about class="bar">About</a></li>
       </ul>
     </nav>
    
     
-            <div class="folium-map" id="map_1b826c7fc46f463d9ee3e43946182393" ></div>
+            <div class="folium-map" id="map_789b4bf6ff274bf4af02fc376cdd3852" ></div>
         
 </body>
 <script>    
     
-            var map_1b826c7fc46f463d9ee3e43946182393 = L.map(
-                "map_1b826c7fc46f463d9ee3e43946182393",
+            var map_789b4bf6ff274bf4af02fc376cdd3852 = L.map(
+                "map_789b4bf6ff274bf4af02fc376cdd3852",
                 {
                     center: [0, 0],
                     crs: L.CRS.EPSG3857,
@@ -62,76 +62,76 @@
 
         
     
-            var tile_layer_984f37c3911c4ca89ff5c1259e2940de = L.tileLayer(
+            var tile_layer_2bb958caf6b643bc90f5134973c63064 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_1b826c7fc46f463d9ee3e43946182393);
+            ).addTo(map_789b4bf6ff274bf4af02fc376cdd3852);
         
     
-            var tile_layer_fe96aea72fbb41fb8440ed6b0267aa42 = L.tileLayer(
+            var tile_layer_a8a024da157947beba3c0c6e2ac88923 = L.tileLayer(
                 "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_1b826c7fc46f463d9ee3e43946182393);
+            ).addTo(map_789b4bf6ff274bf4af02fc376cdd3852);
         
     
-            var circle_marker_e3749c489d6a47c7be4fc3e5afe4f2b1 = L.circleMarker(
+            var circle_marker_86c9bbda73ba4e41a8e874e432bdf93f = L.circleMarker(
                 [44.98050843677087, -93.22381636866623],
                 {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#336600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 102.33004968952758, "stroke": true, "weight": 1}
-            ).addTo(map_1b826c7fc46f463d9ee3e43946182393);
+            ).addTo(map_789b4bf6ff274bf4af02fc376cdd3852);
         
     
-        var popup_a85b870099e142d091cb695d82e95cfa = L.popup({"maxWidth": "100%"});
+        var popup_03cbad41900d4948913377db64bc78f4 = L.popup({"maxWidth": "100%"});
 
         
-            var html_58b47bd564e14ed4ae014f42cbf46bec = $(`<div id="html_58b47bd564e14ed4ae014f42cbf46bec" style="width: 100.0%; height: 100.0%;">Listing: <a href="adsf"target="_blank">buttwhole aids</a><br>Host: <a href="hey"target="_blank">15 people died</a></div>`)[0];
-            popup_a85b870099e142d091cb695d82e95cfa.setContent(html_58b47bd564e14ed4ae014f42cbf46bec);
+            var html_05a82c1a0a5746c0a80350823603e07a = $(`<div id="html_05a82c1a0a5746c0a80350823603e07a" style="width: 100.0%; height: 100.0%;">Listing: <a href="adsf"target="_blank">buttwhole aids</a><br>Host: <a href="hey"target="_blank">15 people died</a></div>`)[0];
+            popup_03cbad41900d4948913377db64bc78f4.setContent(html_05a82c1a0a5746c0a80350823603e07a);
         
 
-        circle_marker_e3749c489d6a47c7be4fc3e5afe4f2b1.bindPopup(popup_a85b870099e142d091cb695d82e95cfa)
+        circle_marker_86c9bbda73ba4e41a8e874e432bdf93f.bindPopup(popup_03cbad41900d4948913377db64bc78f4)
         ;
 
         
     
     
-            var circle_marker_4c92fa50efca43f4b1b9bf8e1af9cba3 = L.circleMarker(
+            var circle_marker_6902825edcd84857bd1645c927fdb587 = L.circleMarker(
                 [44.95663642789118, -93.23224181739329],
                 {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#336600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.918680756834128, "stroke": true, "weight": 1}
-            ).addTo(map_1b826c7fc46f463d9ee3e43946182393);
+            ).addTo(map_789b4bf6ff274bf4af02fc376cdd3852);
         
     
-        var popup_063d92b4f4414f3190f6f46a717d5c15 = L.popup({"maxWidth": "100%"});
+        var popup_1d7488a8ee4c4f3b82e22c3e8476ad79 = L.popup({"maxWidth": "100%"});
 
         
-            var html_77f7f53e6d3249dca75776be1a42732a = $(`<div id="html_77f7f53e6d3249dca75776be1a42732a" style="width: 100.0%; height: 100.0%;">Listing: <a href="adsf"target="_blank">buttwhole aids</a><br>Host: <a href="hey"target="_blank">15 people died</a></div>`)[0];
-            popup_063d92b4f4414f3190f6f46a717d5c15.setContent(html_77f7f53e6d3249dca75776be1a42732a);
+            var html_b485e03bfbad4ebfbb6dee2fe0c2ccd7 = $(`<div id="html_b485e03bfbad4ebfbb6dee2fe0c2ccd7" style="width: 100.0%; height: 100.0%;">Listing: <a href="adsf"target="_blank">buttwhole aids</a><br>Host: <a href="hey"target="_blank">15 people died</a></div>`)[0];
+            popup_1d7488a8ee4c4f3b82e22c3e8476ad79.setContent(html_b485e03bfbad4ebfbb6dee2fe0c2ccd7);
         
 
-        circle_marker_4c92fa50efca43f4b1b9bf8e1af9cba3.bindPopup(popup_063d92b4f4414f3190f6f46a717d5c15)
+        circle_marker_6902825edcd84857bd1645c927fdb587.bindPopup(popup_1d7488a8ee4c4f3b82e22c3e8476ad79)
         ;
 
         
     
     
-            var circle_marker_5c7d8b40aef0496d85f37b2013c3e291 = L.circleMarker(
+            var circle_marker_a143b5a68f494955b0e682238be9dd75 = L.circleMarker(
                 [44.91023637815164, -93.4754213779675],
                 {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#336600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 369.0906805833638, "stroke": true, "weight": 1}
-            ).addTo(map_1b826c7fc46f463d9ee3e43946182393);
+            ).addTo(map_789b4bf6ff274bf4af02fc376cdd3852);
         
     
-        var popup_b3e7bdee276a4437bd1bdebef2671640 = L.popup({"maxWidth": "100%"});
+        var popup_81df47bc501f4ab2aab5fd16bd05c61b = L.popup({"maxWidth": "100%"});
 
         
-            var html_0d354964b37145729247cf8560513195 = $(`<div id="html_0d354964b37145729247cf8560513195" style="width: 100.0%; height: 100.0%;">Listing: <a href="adsf"target="_blank">buttwhole aids</a><br>Host: <a href="hey"target="_blank">15 people died</a></div>`)[0];
-            popup_b3e7bdee276a4437bd1bdebef2671640.setContent(html_0d354964b37145729247cf8560513195);
+            var html_81692d71dfec45e2935c15f728ceac55 = $(`<div id="html_81692d71dfec45e2935c15f728ceac55" style="width: 100.0%; height: 100.0%;">Listing: <a href="adsf"target="_blank">buttwhole aids</a><br>Host: <a href="hey"target="_blank">15 people died</a></div>`)[0];
+            popup_81df47bc501f4ab2aab5fd16bd05c61b.setContent(html_81692d71dfec45e2935c15f728ceac55);
         
 
-        circle_marker_5c7d8b40aef0496d85f37b2013c3e291.bindPopup(popup_b3e7bdee276a4437bd1bdebef2671640)
+        circle_marker_a143b5a68f494955b0e682238be9dd75.bindPopup(popup_81df47bc501f4ab2aab5fd16bd05c61b)
         ;
 
         
     
     
-            map_1b826c7fc46f463d9ee3e43946182393.fitBounds(
+            map_789b4bf6ff274bf4af02fc376cdd3852.fitBounds(
                 [[44.91023637815164, -93.4754213779675], [44.98050843677087, -93.22381636866623]],
                 {}
             );
