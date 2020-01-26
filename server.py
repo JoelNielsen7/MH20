@@ -6,7 +6,7 @@ import pymongo
 from symptoms import build_symptom_map
 from diseases import build_disease_map
 from datetime import datetime
-from map_testing import get_curdata, get_html
+from map_testing import get_curdata, get_html, update_dots
 import apimedic
 from db import get_db_two
 from new_map import make_map, create_geojson_features
