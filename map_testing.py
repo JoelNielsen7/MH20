@@ -155,15 +155,15 @@ def get_html(data):
 
 
     this_map.save("templates/hello.html")
-    
+
     phrase1 = '<head>'
     phrase2 = '<body>'
     html1 = ''' <link href="{{ url_for('static', filename='css/home_style.css') }}" rel="stylesheet"> '''
     html2 = ''' <nav>
-      <ul class="nav">
-        <li><a href=./>Home</a></li>
-        <li><a href=./form.html>Submit Symptoms</a></li>
-        <li><a href=./about.html>About</a></li>
+      <ul class="bar nav">
+        <li class="bar"><a href=./ class="active_bar bar">Home</a></li>
+        <li class="bar"><a href=./form class="bar">Submit Symptoms</a></li>
+        <li class="bar"><a href=./about class="bar">About</a></li>
       </ul>
     </nav>
 '''

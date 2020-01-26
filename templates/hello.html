@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_1b826c7fc46f463d9ee3e43946182393 {
+                #map_9914b0163bd743c18bc155f1bbea94f2 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -32,108 +32,111 @@
                 }
             </style>
         
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="https://rawcdn.githack.com/nezasa/iso8601-js-period/master/iso8601.min.js"></script>
+    <script src="https://rawcdn.githack.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 </head>
 <body>  <nav>
-      <ul class="nav">
-        <li><a href=./>Home</a></li>
-        <li><a href=./form.html>Submit Symptoms</a></li>
-        <li><a href=./about.html>About</a></li>
+      <ul class="bar nav">
+        <li class="bar"><a href=./ class="active_bar bar">Home</a></li>
+        <li class="bar"><a href=./form class="bar">Submit Symptoms</a></li>
+        <li class="bar"><a href=./about class="bar">About</a></li>
       </ul>
     </nav>
    
     
-            <div class="folium-map" id="map_1b826c7fc46f463d9ee3e43946182393" ></div>
+            <div class="folium-map" id="map_9914b0163bd743c18bc155f1bbea94f2" ></div>
         
 </body>
 <script>    
     
-            var map_1b826c7fc46f463d9ee3e43946182393 = L.map(
-                "map_1b826c7fc46f463d9ee3e43946182393",
+            var map_9914b0163bd743c18bc155f1bbea94f2 = L.map(
+                "map_9914b0163bd743c18bc155f1bbea94f2",
                 {
-                    center: [0, 0],
+                    center: [44.958057, -93.265234],
                     crs: L.CRS.EPSG3857,
-                    zoom: 1,
+                    zoom: 11,
                     zoomControl: true,
-                    preferCanvas: true,
+                    preferCanvas: false,
                 }
             );
+            L.control.scale().addTo(map_9914b0163bd743c18bc155f1bbea94f2);
 
             
 
         
     
-            var tile_layer_984f37c3911c4ca89ff5c1259e2940de = L.tileLayer(
+            var tile_layer_7f3cbefa8a6445ef8791eadaa4cef5d3 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_1b826c7fc46f463d9ee3e43946182393);
+            ).addTo(map_9914b0163bd743c18bc155f1bbea94f2);
         
     
-            var tile_layer_fe96aea72fbb41fb8440ed6b0267aa42 = L.tileLayer(
+            var tile_layer_e3402ac86d364f539742ca475a285aca = L.tileLayer(
                 "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_1b826c7fc46f463d9ee3e43946182393);
+            ).addTo(map_9914b0163bd743c18bc155f1bbea94f2);
         
     
-            var circle_marker_e3749c489d6a47c7be4fc3e5afe4f2b1 = L.circleMarker(
-                [44.98050843677087, -93.22381636866623],
-                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#336600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 102.33004968952758, "stroke": true, "weight": 1}
-            ).addTo(map_1b826c7fc46f463d9ee3e43946182393);
-        
-    
-        var popup_a85b870099e142d091cb695d82e95cfa = L.popup({"maxWidth": "100%"});
-
-        
-            var html_58b47bd564e14ed4ae014f42cbf46bec = $(`<div id="html_58b47bd564e14ed4ae014f42cbf46bec" style="width: 100.0%; height: 100.0%;">Listing: <a href="adsf"target="_blank">buttwhole aids</a><br>Host: <a href="hey"target="_blank">15 people died</a></div>`)[0];
-            popup_a85b870099e142d091cb695d82e95cfa.setContent(html_58b47bd564e14ed4ae014f42cbf46bec);
-        
-
-        circle_marker_e3749c489d6a47c7be4fc3e5afe4f2b1.bindPopup(popup_a85b870099e142d091cb695d82e95cfa)
-        ;
-
-        
-    
-    
-            var circle_marker_4c92fa50efca43f4b1b9bf8e1af9cba3 = L.circleMarker(
-                [44.95663642789118, -93.23224181739329],
-                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#336600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.918680756834128, "stroke": true, "weight": 1}
-            ).addTo(map_1b826c7fc46f463d9ee3e43946182393);
-        
-    
-        var popup_063d92b4f4414f3190f6f46a717d5c15 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_77f7f53e6d3249dca75776be1a42732a = $(`<div id="html_77f7f53e6d3249dca75776be1a42732a" style="width: 100.0%; height: 100.0%;">Listing: <a href="adsf"target="_blank">buttwhole aids</a><br>Host: <a href="hey"target="_blank">15 people died</a></div>`)[0];
-            popup_063d92b4f4414f3190f6f46a717d5c15.setContent(html_77f7f53e6d3249dca75776be1a42732a);
-        
-
-        circle_marker_4c92fa50efca43f4b1b9bf8e1af9cba3.bindPopup(popup_063d92b4f4414f3190f6f46a717d5c15)
-        ;
-
-        
-    
-    
-            var circle_marker_5c7d8b40aef0496d85f37b2013c3e291 = L.circleMarker(
-                [44.91023637815164, -93.4754213779675],
-                {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#336600", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 369.0906805833638, "stroke": true, "weight": 1}
-            ).addTo(map_1b826c7fc46f463d9ee3e43946182393);
-        
-    
-        var popup_b3e7bdee276a4437bd1bdebef2671640 = L.popup({"maxWidth": "100%"});
-
-        
-            var html_0d354964b37145729247cf8560513195 = $(`<div id="html_0d354964b37145729247cf8560513195" style="width: 100.0%; height: 100.0%;">Listing: <a href="adsf"target="_blank">buttwhole aids</a><br>Host: <a href="hey"target="_blank">15 people died</a></div>`)[0];
-            popup_b3e7bdee276a4437bd1bdebef2671640.setContent(html_0d354964b37145729247cf8560513195);
-        
-
-        circle_marker_5c7d8b40aef0496d85f37b2013c3e291.bindPopup(popup_b3e7bdee276a4437bd1bdebef2671640)
-        ;
-
-        
-    
-    
-            map_1b826c7fc46f463d9ee3e43946182393.fitBounds(
-                [[44.91023637815164, -93.4754213779675], [44.98050843677087, -93.22381636866623]],
-                {}
+            L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
+                _getDisplayDateFormat: function(date){
+                    var newdate = new moment(date);
+                    console.log(newdate)
+                    return newdate.format("YYYY/MM");
+                }
+            });
+            map_9914b0163bd743c18bc155f1bbea94f2.timeDimension = L.timeDimension(
+                {
+                    period: "P1M",
+                }
             );
+            var timeDimensionControl = new L.Control.TimeDimensionCustom(
+                {"autoPlay": true, "loopButton": true, "maxSpeed": 0.7, "minSpeed": 0.1, "playerOptions": {"loop": true, "startOver": true, "transitionTime": 200}, "position": "bottomleft", "timeSliderDragUpdate": true}
+            );
+            map_9914b0163bd743c18bc155f1bbea94f2.addControl(this.timeDimensionControl);
+
+            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-93.22497057911082, 44.97844929118058]}, "properties": {"time": "2020-01-22", "style": {"color": "#8FC6B4"}, "icon": "circle", "popup": " <b>Warning: 2 cases of <u>Flu</u> reported in this area. </b <br><a href = https://www.webmd.com/search/search_results/default.aspx?query=Flu> Learn more here </a>", "iconstyle": {"fillColor": "#8FC6B4", "fillOpacity": 0.6, "stroke": "False", "radius": 30.483819587146396}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-93.23286021159552, 44.954174618594124]}, "properties": {"time": "2020-01-22", "style": {"color": "#BAC39F"}, "icon": "circle", "popup": " <b>Warning: 2 cases of <u>Food poisoning</u> reported in this area. </b <br><a href = https://www.webmd.com/search/search_results/default.aspx?query=Food_poisoning> Learn more here </a>", "iconstyle": {"fillColor": "#BAC39F", "fillOpacity": 0.6, "stroke": "False", "radius": 6.854077179424415}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-93.47257991864501, 44.913810585434426]}, "properties": {"time": "2020-01-22", "style": {"color": "#E5B374"}, "icon": "circle", "popup": " <b>Warning: 2 cases of <u>Pink eye</u> reported in this area. </b <br><a href = https://www.webmd.com/search/search_results/default.aspx?query=Pink_eye> Learn more here </a>", "iconstyle": {"fillColor": "#E5B374", "fillOpacity": 0.6, "stroke": "False", "radius": 110.60893618507606}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-93.24360893871444, 44.98285852033094]}, "properties": {"time": "2020-01-22", "style": {"color": "#F99D78"}, "icon": "circle", "popup": " <b>Warning: 2 cases of <u>Measles</u> reported in this area. </b <br><a href = https://www.webmd.com/search/search_results/default.aspx?query=Measles> Learn more here </a>", "iconstyle": {"fillColor": "#F99D78", "fillOpacity": 0.6, "stroke": "False", "radius": 148.52936158267113}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-93.22563608112972, 44.873767080078544]}, "properties": {"time": "2020-01-22", "style": {"color": "#829C9C"}, "icon": "circle", "popup": " <b>Warning: 2 cases of <u>Burn</u> reported in this area. </b <br><a href = https://www.webmd.com/search/search_results/default.aspx?query=Burn> Learn more here </a>", "iconstyle": {"fillColor": "#829C9C", "fillOpacity": 0.6, "stroke": "False", "radius": 13.88244029302843}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-93.00012414481765, 45.25435388278669]}, "properties": {"time": "2020-01-22", "style": {"color": "#E4C678"}, "icon": "circle", "popup": " <b>Warning: 2 cases of <u>Stress disorder after trauma</u> reported in this area. </b <br><a href = https://www.webmd.com/search/search_results/default.aspx?query=Stress_disorder_after_trauma> Learn more here </a>", "iconstyle": {"fillColor": "#E4C678", "fillOpacity": 0.6, "stroke": "False", "radius": 215.1668170495086}}}]}, {
+                    pointToLayer: function (feature, latLng) {
+                        if (feature.properties.icon == 'marker') {
+                            if(feature.properties.iconstyle){
+                                return new L.Marker(latLng, {
+                                    icon: L.icon(feature.properties.iconstyle)});
+                            }
+                            //else
+                            return new L.Marker(latLng);
+                        }
+                        if (feature.properties.icon == 'circle') {
+                            if (feature.properties.iconstyle) {
+                                return new L.circleMarker(latLng, feature.properties.iconstyle)
+                                };
+                            //else
+                            return new L.circleMarker(latLng);
+                        }
+                        //else
+
+                        return new L.Marker(latLng);
+                    },
+                    style: function (feature) {
+                        return feature.properties.style;
+                    },
+                    onEachFeature: function(feature, layer) {
+                        if (feature.properties.popup) {
+                        layer.bindPopup(feature.properties.popup);
+                        }
+                    }
+                })
+
+            var timestamped_geo_json_d2ee50d2ebfe4f1f8a9a52cca6398b55 = L.timeDimension.layer.geoJson(
+                geoJsonLayer,
+                {
+                    updateTimeDimension: true,
+                    addlastPoint: true,
+                    duration: undefined,
+                }
+            ).addTo(map_9914b0163bd743c18bc155f1bbea94f2);
         
 </script>

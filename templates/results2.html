@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact V11</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icons/favicon.ico')}}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/Linearicons-Free-v1.0.0/icon-font.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/animate/animate.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/css-hamburgers/hamburgers.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='vendor/select2/select2.min.css')}}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/util.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css')}}">
+<!--===============================================================================================-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/js/select2.min.js"></script>
+    <link href="{{ url_for('static', filename='css/home_style.css') }}" rel="stylesheet">
+<script>
+</script>
+</head>
+<body>
+ 
+<nav>
+      <ul class="bar nav">
+        <li class="bar"><a href=./ class="bar">Home</a></li>
+        <li class="bar"><a href=./form class="bar">Submit Symptoms</a></li>
+        <li class="bar"><a href=./about class="bar">About</a></li>
+      </ul>
+    </nav>
+
+ 	<div class="container-contact100" style="background-image: url('static/images/bg-01.jpg');">
+
+		<div class="wrap-contact100"><span class="contact100-form-title"> You Matched With 5 Diseases...
+                                </span>
+                        <table style="width: 100%" frame=void border=1 rules=rows><tr>
+                        <td class="results"> Infection of kidney pelvis </td>
+                        <td class="percent results"> 89.99999%</td>
+                        </tr><tr>
+                        <td class="results"> Flu </td>
+                        <td class="percent results"> 67.82215%</td>
+                        </tr><tr>
+                        <td class="results"> Food poisoning </td>
+                        <td class="percent results"> 59.17059%</td>
+                        </tr><tr>
+                        <td class="results"> Inflammation of the liver </td>
+                        <td class="percent results"> 34.6043053%</td>
+                        </tr><tr>
+                        <td class="results"> Listeria infection </td>
+                        <td class="percent results"> 16.3903522%</td>
+                        </tr></table>
+<!--				<span class="contact100-form-title">
+					You Matched With N Diseases...
+				</span>
+			<table style="width: 100%" frame=void border=1 rules=rows>
+			<tr>
+			<td class="results">
+			Ebola</td>
+ 			<td class="percent results">93%</td>
+			</tr>
+			<tr>
+			<td class="results">
+			Butthold AIDS</td>
+  			<td class="percent results">75%</td></tr></table> -->
+		</div>
+
+	</div>
+
+
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='vendor/bootstrap/js/popper.js')}}"></script>
+	<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='vendor/select2/select2.min.js')}}"></script>
+<!--===============================================================================================-->
+	<script src="{{ url_for('static', filename='js/main.js')}}"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+</body>
+</html>
