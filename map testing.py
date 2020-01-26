@@ -13,10 +13,40 @@ import re
 import numpy as np
 
 
+import pymongo
+import pandas as pd
+myclient = pymongo.MongoClient("mongodb+srv://SickoMode:SickoMode@cluster0-zfxxk.mongodb.net/test?retryWrites=true&w=majority")
+# db = myclient.test
+# print(db)
+# dblist = myclient.list_database_names()
+# print(dblist)
+mydb = myclient["SickoMode"]
+mycol = mydb["Diseases"]
+#
+#
+#mydict = { "gender": "M", "latitude": "44052343N","longitude" "diseases": [{'name': 'buttholeaids', 'percent': 80}, {'name': 'buttholeaids2', 'percent': 90}] }
+#
+#x = mycol.insert_one(mydict)
 
-data = pd.read_pickle('data/listings_cleaned.pkl')
-data = pd.DataFrame(data, columns = ['latitude','longitude','listing_name','listing_url','host_name','host_url'])[:50]#  <-this kind of slice is useful for developing a map
-data.head()
+
+x = mycol.find()
+
+keys = x[1].keys()
+
+dattylist = []
+keys = ["Latitude","Longitude", "Confirmed", "Diseases" ]
+for row in x:
+    rowadd = [row["Latitude"], row["Longitude"], row["Confirmed"], row["Diseases"][0]["ID"], row["Diseases"][0]["Prob"], row["Diseases"][1]["ID"], row["Diseases"][1]["Prob"]]
+    dattylist.append(rowadd)
+
+
+
+
+
+df = pd.DataFrame(dattylist, columns =['latitude', 'longitude', 'confirmed', 'd1_id', 'd1_prob', 'd2_id', 'd2_prob'], dtype = float)
+
+
+data = df
 
 
 
@@ -29,8 +59,8 @@ def makeHref(url,link_text = None):
 
 def popopHTMLString(point):
     '''input: a series that contains a url somewhere in it and generate html'''
-    html = 'Listing: ' + makeHref(point.listing_url, point.listing_name) + '<br>'
-    html += 'Host: ' + makeHref(point.host_url, point.host_name)
+    html = 'Listing: ' + makeHref(point.d1_prob, point.d1_id) + '<br>'
+    html += 'Host: ' + makeHref(point.d2_id, point.d2_id)
     return html
 
 def plotDot(point):
