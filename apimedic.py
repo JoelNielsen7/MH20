@@ -68,4 +68,8 @@ def get_diagnosis(gender, age, symptoms):
 
 init_obj()
 diag = get_diagnosis('male', 16, [40, 146])
+<<<<<<< HEAD
 #print(diag)
+=======
+print(diag)
+>>>>>>> 14cf5d94fa6918c444ca2f4775bdeefb26ac8509

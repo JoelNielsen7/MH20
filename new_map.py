@@ -19,6 +19,7 @@ def create_geojson_features(df):
 
         dis = map[row["id"]]
         if dis == "Flu":
+
             colorr = color[0]
         elif dis == "Pink eye":
             colorr = color[1]
@@ -40,7 +41,7 @@ def create_geojson_features(df):
                 'time': row['std'].date().__str__(),
                 'style': {'color' : colorr},
                 'icon': 'circle',
-                'popup': "<a href = https://www.webmd.com/search/search_results/default.aspx?query="+ dis.replace(" ",'_') +">"+ dis + ", Count in area: "+ str(row['date']) +"</a>",
+                'popup': " <b>Warning: " + str(row['date']) + " cases of <u>" + dis +"</u> reported in this area. </b <br><a href = https://www.webmd.com/search/search_results/default.aspx?query="+ dis.replace(" ",'_') +"> Learn more here </a>",
                 'iconstyle':{
                     'fillColor': colorr,
                     'fillOpacity': .6,
